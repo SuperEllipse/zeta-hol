@@ -833,17 +833,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pain-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pain Points
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#alternative-claude-cli" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1240,17 +1229,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pain-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pain Points
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#alternative-claude-cli" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1376,13 +1354,6 @@
 <h3 id="7-shut-down-when-done">7. Shut Down When Done<a class="headerlink" href="#7-shut-down-when-done" title="Permanent link">&para;</a></h3>
 <p>Press <strong>Ctrl+C</strong> in the <code>cdswctl</code> terminal to shut down the session and stop consuming workbench resources.</p>
 <p><img alt="Session resource cleanup" src="../../images/cursor-remote-ssh/session-resources.png" /></p>
-<hr />
-<h2 id="pain-points">Pain Points<a class="headerlink" href="#pain-points" title="Permanent link">&para;</a></h2>
-<p>Two things worth doing to make this less tedious:</p>
-<ul>
-<li><strong>The shifting port is the main annoyance.</strong> Check <code>cdswctl ssh-endpoint --help</code> for a flag to pin a fixed local port — if one exists in your version, you would not need to edit the config again each session. Verify the exact flag name in your installed version.</li>
-<li><strong>You can wrap login + endpoint in a small script</strong> so each session is one command. Remember it would contain your API key in plaintext, so keep that file private (<code>chmod 600</code>).</li>
-</ul>
 <hr />
 <h2 id="alternative-claude-cli">Alternative: Claude CLI<a class="headerlink" href="#alternative-claude-cli" title="Permanent link">&para;</a></h2>
 <p>If you prefer working entirely in the browser without Remote SSH, see <strong><a href="../claude-private-model/">Claude with Private Model</a></strong> for using the Claude CLI directly in the workbench terminal.</p>
