@@ -163,15 +163,6 @@ Press **Ctrl+C** in the `cdswctl` terminal to shut down the session and stop con
 
 ---
 
-## Pain Points
-
-Two things worth doing to make this less tedious:
-
-- **The shifting port is the main annoyance.** Check `cdswctl ssh-endpoint --help` for a flag to pin a fixed local port — if one exists in your version, you would not need to edit the config again each session. Verify the exact flag name in your installed version.
-- **You can wrap login + endpoint in a small script** so each session is one command. Remember it would contain your API key in plaintext, so keep that file private (`chmod 600`).
-
----
-
 ## Alternative: Claude CLI
 
 If you prefer working entirely in the browser without Remote SSH, see **[Claude with Private Model](claude-private-model.md)** for using the Claude CLI directly in the workbench terminal.
