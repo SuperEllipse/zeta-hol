@@ -75,29 +75,13 @@ The JSON file contains campaign performance metrics:
 
 ---
 
-## Quick Start: Load Data in Python
-
-```python
-import json
-import pandas as pd
-
-with open("sample_metric_data.json", "r") as f:
-    payload = json.load(f)
-
-df = pd.DataFrame(payload["records"])
-df["date"] = pd.to_datetime(df["date"])
-
-print(f"Loaded {len(df)} campaign records")
-print(df.head())
-```
-
----
-
 ## Using the Notebook
+
+Follow along with the **[workshop demo recording](../demo-videos/index.md)**, which walks through loading sample data step by step.
 
 1. Upload or clone `dataload_notebook.ipynb` into your project
 2. Open it in JupyterLab (from your active session)
-3. Run all cells sequentially
+3. Run all cells sequentially, as demonstrated in the video
 
 The notebook covers:
 
@@ -119,18 +103,3 @@ The notebook covers:
 | **Conversion Rate** | conversions / clicks × 100 | Conversion rate (%) |
 | **ROAS** | revenue / spend | Return on ad spend |
 | **CPC** | spend / clicks | Cost per click |
-
----
-
-## Hackathon Ideas
-
-Use this sample data as a starting point for:
-
-- **Campaign performance dashboards** — Visualize metrics by channel
-- **Budget optimization models** — Predict ROAS by channel
-- **Anomaly detection** — Flag underperforming campaigns
-- **Customer segmentation** — Extend data with synthetic user attributes
-- **AI-powered insights** — Use Claude CLI to generate analysis narratives
-
-!!! tip "Extend the Data"
-    Feel free to enrich the sample dataset or connect to additional data sources provided by your instructor for the hackathon challenge.

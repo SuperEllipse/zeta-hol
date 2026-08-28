@@ -1,14 +1,6 @@
 # Using Cursor with Cloudera AI (Remote SSH)
 
-This section explains how to connect **Cursor IDE** to your Cloudera AI workbench session using **Remote SSH**, enabling AI-assisted coding directly against your project environment.
-
-## Overview
-
-Cursor supports remote development via SSH, allowing you to:
-
-- Edit code locally in Cursor while files run on the Cloudera AI workbench
-- Use Cursor's AI features against your project codebase
-- Access terminal, notebooks, and project files seamlessly
+This guide explains how to connect **Cursor IDE** to your Cloudera AI workbench session using **Remote SSH** and the **cdswctl** CLI, enabling AI-assisted coding directly against your project environment.
 
 ## Prerequisites
 
@@ -16,112 +8,169 @@ Before connecting, ensure you have:
 
 - [x] Completed [Login & Workbench Setup](../setup/login-and-project.md)
 - [x] Created your team [project](../setup/project-and-runtimes.md)
-- [x] Started an active session in your project
 - [x] **Cursor IDE** installed on your local machine ([cursor.com](https://cursor.com))
-- [x] SSH access credentials from your Cloudera AI session
 
-## Step 1: Install the Remote SSH Extension
+---
 
-1. Open **Cursor**
-2. Go to **Extensions** (`Ctrl+Shift+X` / `Cmd+Shift+X`)
-3. Search for **Remote - SSH**
-4. Install the extension (published by Anysphere or Microsoft)
+## One-time Setup
 
-## Step 2: Obtain SSH Connection Details
-
-From your Cloudera AI project session:
-
-1. Click **Terminal Access** in the top navigation bar (or open a terminal session)
-2. Look for SSH connection information provided by the workbench, typically:
-   - **Host**: `<workbench-host>.cloudera.com`
-   - **Port**: `<assigned-port>`
-   - **Username**: `cdsw` (default Cloudera Data Science Workbench user)
-   - **Key or password**: Provided in session settings or Terminal Access panel
-
-!!! note "SSH Access Location"
-    SSH connection details are available under **Terminal Access** or **Project Settings → SSH** in your Cloudera AI workbench. Your instructor can provide the exact location for this workshop environment.
-
-## Step 3: Configure SSH in Cursor
-
-### Option A: Quick Connect
-
-1. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac) to open the Command Palette
-2. Type **Remote-SSH: Connect to Host**
-3. Enter your connection string:
+### 1. Generate an SSH Key
 
 ```bash
-ssh cdsw@<workbench-host> -p <port>
+ssh-keygen -C cai
 ```
 
-### Option B: SSH Config File (Recommended)
+Accept the default location, or set the file to `/Users/<username>/.ssh/id_cai`. Optionally set a passphrase.
 
-Add an entry to your local `~/.ssh/config` file:
+### 2. Copy the Public Key
+
+```bash
+cat ~/.ssh/id_cai.pub
+```
+
+Copy the entire output line.
+
+### 3. Add the Key to the Workbench
+
+In the Cloudera AI Workbench, go to **User Settings → Keys & Access → Remote Editing**, paste your public key into **SSH Public Key**, and click **Add**.
+
+![Add SSH public key in Remote Editing settings](../images/cursor-remote-ssh/remote-editing-ssh-key.png)
+
+![SSH key fingerprint after adding](../images/cursor-remote-ssh/remote-editing-key-added.png)
+
+### 4. Download the CML CLI Client
+
+On the same **Remote Editing** page, download the **CML CLI client** (`cdswctl`) for your operating system.
+
+![Download cdswctl from Remote Editing](../images/cursor-remote-ssh/download-cdswctl.png)
+
+On Mac, if the download is blocked: **Finder → Control-click → Open**.
+
+![Unblock cdswctl on Mac](../images/cursor-remote-ssh/cdswctl-mac-unblock.png)
+
+### 5. Add cdswctl to Your PATH
+
+After downloading, unpack the archive and optionally add `cdswctl` to your system `PATH` environment variable.
+
+### 6. Get Your Legacy API Key
+
+In the Cloudera AI Workbench, go to **User Settings → Keys & Access → API Keys** and copy the **Legacy API Key** (not the plain "API Key").
+
+Please feel free to **Rotate** the key as needed.
+
+![Copy Legacy API Key](../images/cursor-remote-ssh/legacy-api-key.png)
+
+### 7. Create the SSH Config Entry
+
+Add the following entry to `~/.ssh/config`:
 
 ```ssh-config
-Host cloudera-zeta
-    HostName <workbench-host>
+Host cai-workbench
+    HostName localhost
+    Port 3735
     User cdsw
-    Port <port>
-    IdentityFile ~/.ssh/<your-key-file>
+    IdentityFile ~/.ssh/id_cai
     StrictHostKeyChecking no
+    ServerAliveInterval 60
+    ServerAliveCountMax 10
 ```
 
-Then in Cursor:
+!!! note "Port Changes Each Session"
+    The `Port` value will need updating each session — see step 4 under [Every-session Steps](#every-session-steps) below.
 
-1. Command Palette → **Remote-SSH: Connect to Host**
-2. Select **`cloudera-zeta`**
-3. Cursor opens a new window connected to the remote environment
+---
 
-## Step 4: Open Your Project Folder
+## Every-session Steps
 
-Once connected:
+### 1. Log In to CAI Workbench Remotely
 
-1. Click **Open Folder**
-2. Navigate to your project directory (typically `/home/cdsw` or your project path)
-3. Click **OK** to trust the workspace
-
-Your Cursor editor now operates against the remote Cloudera AI filesystem.
-
-## Step 5: Configure Cloudera AI Inference (Optional)
-
-If you want Cursor to use the Cloudera AI Inference endpoint for AI features:
-
-1. In Cursor, open **Settings** → **Models**
-2. Add a custom OpenAI-compatible endpoint:
-   - **Base URL**: Your CAI inference endpoint (available in session environment variables)
-   - **API Key**: Use the key provided in your session or leave blank if using local proxy
-3. Select the configured model for AI completions
-
-Environment variables in your session typically include:
+Use the **Legacy API Key**, not the API Key ID:
 
 ```bash
-echo $CAI_HOME
-echo $OPENAI_BASE_URL
+cdswctl login -u https://<workbench-url> -n <username> -y <legacy_api_key>
 ```
 
-These point to the LiteLLM proxy and Cloudera AI Inference configuration.
+If Mac prevents you from running the `cdswctl` command, remove the quarantine attribute:
 
-## Step 6: Start Coding
+```bash
+xattr -d com.apple.quarantine /<PATH>/cdswctl
+```
 
-With Remote SSH connected, you can:
+Wait for **"Login succeeded."**
 
-- Create and edit Python files, notebooks, and scripts
-- Use Cursor's AI chat and inline completions
-- Run terminal commands on the remote workbench
-- Debug code with full IDE support
+### 2. Start the Endpoint
 
-!!! tip "Best Practice"
-    Keep your Cloudera AI session running while using Remote SSH. If the session stops, the SSH connection will drop.
+This creates the session and SSH tunnel. First, list available runtimes:
 
-## Troubleshooting
+```bash
+cdswctl runtimes list
+```
 
-| Issue | Solution |
-|-------|----------|
-| Connection refused | Verify the session is running and SSH port is correct |
-| Permission denied | Check SSH key permissions (`chmod 600 ~/.ssh/<key>`) |
-| Host key verification failed | Add `StrictHostKeyChecking no` to SSH config (workshop only) |
-| Cursor AI not responding | Verify CAI inference endpoint and API key configuration |
-| Slow file sync | Ensure stable network; avoid editing very large files locally |
+Spin up a session using a specific runtime. For example, `-r 116` corresponds to **PBJ Workbench / Python 3.10**. It takes a minute or two:
+
+```bash
+cdswctl ssh-endpoint -p <username>/<cai_workbench_project_name> -r 116 -c 2 -m 4
+```
+
+You can verify from the CAI Workbench **Project → Sessions** tab that the new session has been created.
+
+![Session created in CAI Workbench](../images/cursor-remote-ssh/ssh-endpoint-session.png)
+
+### 3. Read the Port
+
+The command prints connection details:
+
+```text
+You can SSH to the session using
+    ssh -p <PORT> cdsw@localhost
+```
+
+Leave this terminal open — this process is the tunnel.
+
+![SSH endpoint port output](../images/cursor-remote-ssh/ssh-endpoint-port.png)
+
+### 4. Update the Port in SSH Config
+
+If `<PORT>` differs from what is saved in `~/.ssh/config` (it changes every session), edit the `Port` line under `cai-workbench` to match.
+
+### 5. Sanity Check (Optional)
+
+In a second terminal:
+
+```bash
+ssh -p <PORT> cdsw@localhost
+```
+
+Run `whoami` — it should return `<username>`. Type `exit` to leave.
+
+### 6. Connect in Cursor
+
+1. Press **Cmd+Shift+P** (Mac) or **Ctrl+Shift+P** (Windows/Linux)
+2. Select **Connect via SSH: Connect to Host**
+3. Choose **`cai-workbench`**
+4. Enter your key passphrase if prompted
+5. **File → Open Folder → `/home/cdsw`**
+
+![Cursor connected to CAI session via SSH](../images/cursor-remote-ssh/cursor-ssh-connected.png)
+
+Your SSH connection to the CAI session is ready for use in Cursor.
+
+### 7. Shut Down When Done
+
+Press **Ctrl+C** in the `cdswctl` terminal to shut down the session and stop consuming workbench resources.
+
+![Session resource cleanup](../images/cursor-remote-ssh/session-resources.png)
+
+---
+
+## Pain Points
+
+Two things worth doing to make this less tedious:
+
+- **The shifting port is the main annoyance.** Check `cdswctl ssh-endpoint --help` for a flag to pin a fixed local port — if one exists in your version, you would not need to edit the config again each session. Verify the exact flag name in your installed version.
+- **You can wrap login + endpoint in a small script** so each session is one command. Remember it would contain your API key in plaintext, so keep that file private (`chmod 600`).
+
+---
 
 ## Alternative: Claude CLI
 

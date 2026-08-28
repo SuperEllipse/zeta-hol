@@ -2,7 +2,7 @@
 
 Welcome to the **Cloudera AI Hands-on Lab and Hackathon** guide for Zeta Global technical teams. This documentation is your reference for the entire event — from logging into the Cloudera platform through building and deploying your hackathon project.
 
-## What You'll Learn
+## Guide Contents
 
 This guide walks you through:
 
