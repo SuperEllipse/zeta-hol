@@ -1,0 +1,25 @@
+# MkDocs build output
+site/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large media (use Git LFS or external hosting)
+# Uncomment if video exceeds GitHub file size limits:
+# docs/videos/*.mp4
+
+# Original asset UUIDs (renamed copies used in docs/images/)
+assets/

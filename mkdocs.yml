@@ -1,0 +1,69 @@
+site_name: Zeta Global Hands-on Lab & Hackathon
+site_description: Cloudera AI workshop guide for Zeta Global technical teams
+site_url: https://superellipse.github.io/zeta-hol/
+repo_url: https://github.com/SuperEllipse/zeta-hol
+repo_name: SuperEllipse/zeta-hol
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: orange
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: orange
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Login & Workbench Setup: setup/login-and-project.md
+      - Project Creation & Runtimes: setup/project-and-runtimes.md
+  - Vibe Coding with Cloudera AI:
+      - Cursor with Remote SSH: vibe-coding/cursor-remote-ssh.md
+      - Claude with Private Model: vibe-coding/claude-private-model.md
+  - Sample Code:
+      - Data Upload & Insertion: sample-code/data-upload.md
+  - Demo Videos: demo-videos/index.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/SuperEllipse/zeta-hol
+
+extra_css:
+  - stylesheets/extra.css
