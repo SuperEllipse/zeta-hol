@@ -1,0 +1,14 @@
+.md-typeset img {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+.md-typeset .image-caption {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85em;
+  font-style: italic;
+  margin-top: -0.5em;
+  text-align: center;
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://superellipse.github.io/zeta-hol/</loc>
+         <lastmod>2026-08-28</lastmod>
+    </url>
+    <url>
+         <loc>https://superellipse.github.io/zeta-hol/demo-videos/</loc>
+         <lastmod>2026-08-28</lastmod>
+    </url>
+    <url>
+         <loc>https://superellipse.github.io/zeta-hol/sample-code/data-upload/</loc>
+         <lastmod>2026-08-28</lastmod>
+    </url>
+    <url>
+         <loc>https://superellipse.github.io/zeta-hol/setup/login-and-project/</loc>
+         <lastmod>2026-08-28</lastmod>
+    </url>
+    <url>
+         <loc>https://superellipse.github.io/zeta-hol/setup/project-and-runtimes/</loc>
+         <lastmod>2026-08-28</lastmod>
+    </url>
+    <url>
+         <loc>https://superellipse.github.io/zeta-hol/vibe-coding/claude-private-model/</loc>
+         <lastmod>2026-08-28</lastmod>
+    </url>
+    <url>
+         <loc>https://superellipse.github.io/zeta-hol/vibe-coding/cursor-remote-ssh/</loc>
+         <lastmod>2026-08-28</lastmod>
+    </url>
+</urlset>
