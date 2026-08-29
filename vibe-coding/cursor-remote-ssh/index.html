@@ -701,13 +701,30 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-download-the-cml-cli-client" class="md-nav__link">
+  <a href="#5-download-and-unblock-the-cml-cli-client" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Download the CML CLI Client
+        5. Download and Unblock the CML CLI Client
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="5. Download and Unblock the CML CLI Client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mac-allow-cdswctl-to-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mac: Allow cdswctl to Run
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -719,6 +736,45 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="6. Add cdswctl to Your PATH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-the-path-to-cdswctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get the Path to cdswctl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac-zsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mac (zsh)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows (PowerShell)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1169,13 +1225,30 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-download-the-cml-cli-client" class="md-nav__link">
+  <a href="#5-download-and-unblock-the-cml-cli-client" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Download the CML CLI Client
+        5. Download and Unblock the CML CLI Client
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="5. Download and Unblock the CML CLI Client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mac-allow-cdswctl-to-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mac: Allow cdswctl to Run
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1187,6 +1260,45 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="6. Add cdswctl to Your PATH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-the-path-to-cdswctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get the Path to cdswctl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac-zsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mac (zsh)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows (PowerShell)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1442,13 +1554,84 @@
 <p>In the Cloudera AI Workbench, go to <strong>User Settings → Keys &amp; Access → Remote Editing</strong>, paste your public key into <strong>SSH Public Key</strong>, and click <strong>Add</strong>.</p>
 <p><img alt="Add SSH public key in Remote Editing settings" src="../../images/cursor-remote-ssh/remote-editing-ssh-key.png" /></p>
 <p><img alt="SSH key fingerprint after adding" src="../../images/cursor-remote-ssh/remote-editing-key-added.png" /></p>
-<h3 id="5-download-the-cml-cli-client">5. Download the CML CLI Client<a class="headerlink" href="#5-download-the-cml-cli-client" title="Permanent link">&para;</a></h3>
-<p>On the same <strong>Remote Editing</strong> page, download the <strong>CML CLI client</strong> (<code>cdswctl</code>) for your operating system.</p>
+<p>While you are on the <strong>Remote Editing</strong> page, note that the <strong>CML CLI client</strong> (<code>cdswctl</code>) can be downloaded for your operating system — you will do this in the next step.</p>
 <p><img alt="Download cdswctl from Remote Editing" src="../../images/cursor-remote-ssh/download-cdswctl.png" /></p>
-<p>On Mac, if the download is blocked: <strong>Finder → Control-click → Open</strong>.</p>
-<p><img alt="Unblock cdswctl on Mac" src="../../images/cursor-remote-ssh/cdswctl-mac-unblock.png" /></p>
+<h3 id="5-download-and-unblock-the-cml-cli-client">5. Download and Unblock the CML CLI Client<a class="headerlink" href="#5-download-and-unblock-the-cml-cli-client" title="Permanent link">&para;</a></h3>
+<p>Download the <strong>CML CLI client</strong> (<code>cdswctl</code>) for your operating system from the <strong>Remote Editing</strong> section shown in step 4.</p>
+<p>Unpack the downloaded archive. You should have a folder containing the <code>cdswctl</code> binary (for example, <code>cdsw-2.0.0.95880-darwin-amd64</code> on Mac).</p>
+<h4 id="mac-allow-cdswctl-to-run">Mac: Allow cdswctl to Run<a class="headerlink" href="#mac-allow-cdswctl-to-run" title="Permanent link">&para;</a></h4>
+<p>macOS quarantines downloaded files and will <strong>not</strong> let you run <code>cdswctl</code> directly from the terminal on first use. When you try, you may see a dialog like this — click <strong>Done</strong> (do not click Move to Bin):</p>
+<p><img alt="cdswctl blocked by macOS" src="../../images/cursor-remote-ssh/cdswctl-mac-quarantine-blocked.png" /></p>
+<p>Then allow the binary manually:</p>
+<ol>
+<li>Open <strong>System Settings → Privacy &amp; Security → Security</strong></li>
+<li>Scroll down until you see a message that <strong><code>"cdswctl" was blocked</code></strong> to protect your Mac</li>
+<li>Click <strong>Allow Anyway</strong></li>
+</ol>
+<p><img alt="Allow cdswctl in Privacy and Security" src="../../images/cursor-remote-ssh/cdswctl-mac-allow-anyway.png" /></p>
+<ol>
+<li>Run <code>cdswctl</code> once more from the terminal — macOS may ask you to confirm again; choose <strong>Open</strong></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Alternative: Remove Quarantine via Terminal</p>
+<p>If the <strong>Allow Anyway</strong> button does not appear, you can remove the quarantine flag manually:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>xattr<span class="w"> </span>-d<span class="w"> </span>com.apple.quarantine<span class="w"> </span>/&lt;PATH&gt;/cdswctl
+</code></pre></div>
+</div>
 <h3 id="6-add-cdswctl-to-your-path">6. Add cdswctl to Your PATH<a class="headerlink" href="#6-add-cdswctl-to-your-path" title="Permanent link">&para;</a></h3>
-<p>After downloading, unpack the archive and optionally add <code>cdswctl</code> to your system <code>PATH</code> environment variable.</p>
+<p>Add the folder containing <code>cdswctl</code> to your shell <code>PATH</code> so you can run it from any directory.</p>
+<h4 id="get-the-path-to-cdswctl">Get the Path to cdswctl<a class="headerlink" href="#get-the-path-to-cdswctl" title="Permanent link">&para;</a></h4>
+<p>In your terminal, change into the folder where you unpacked <code>cdswctl</code>, then print the full path:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>/path/to/your/unpacked/cdsw-folder
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">pwd</span>
+</code></pre></div>
+<p>Copy the output — you will use it in the steps below. The folder name will look something like <code>cdsw-2.0.0.95880-darwin-amd64</code>.</p>
+<p>Verify <code>cdswctl</code> is in that folder:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ls<span class="w"> </span>cdswctl
+</code></pre></div>
+<h4 id="mac-zsh">Mac (zsh)<a class="headerlink" href="#mac-zsh" title="Permanent link">&para;</a></h4>
+<p><strong>1. Create <code>~/.zshrc</code> if it does not exist</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>touch<span class="w"> </span>~/.zshrc
+</code></pre></div>
+<p><strong>2. Open the file to add your PATH</strong></p>
+<p>Open it in TextEdit for easy editing:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>open<span class="w"> </span>-e<span class="w"> </span>~/.zshrc
+</code></pre></div>
+<p>Alternatively, edit in the terminal with <code>nano ~/.zshrc</code>.</p>
+<p><strong>3. Add your PATH variable</strong></p>
+<p>Paste the following line at the end of the file, replacing the path with the output from <code>pwd</code> above:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/Users/&lt;username&gt;/path/to/cdsw-2.0.0.95880-darwin-amd64:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>Save the file (<strong>Cmd+S</strong>) and close it.</p>
+<p><strong>4. Load the updated PATH</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">source</span><span class="w"> </span>~/.zshrc
+</code></pre></div>
+<p><strong>5. Verify</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>cdswctl<span class="w"> </span>--help
+</code></pre></div>
+<p>You should see the <code>cdswctl</code> usage output without a "command not found" error.</p>
+<h4 id="windows-powershell">Windows (PowerShell)<a class="headerlink" href="#windows-powershell" title="Permanent link">&para;</a></h4>
+<p><strong>1. Get the folder path</strong></p>
+<p>In PowerShell, navigate to the unpacked folder and print the path:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">Users</span><span class="p">\&lt;</span><span class="n">username</span><span class="p">&gt;\</span><span class="n">Downloads</span><span class="p">\</span><span class="n">cdsw</span><span class="p">-</span><span class="n">2</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">xxxxx-windows-amd64</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="p">(</span><span class="nb">Get-Location</span><span class="p">).</span><span class="n">Path</span>
+</code></pre></div>
+<p>Copy the output path.</p>
+<p><strong>2. Add to your user PATH permanently</strong></p>
+<p>Replace the path below with your copied path:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="no">[Environment]</span><span class="p">::</span><span class="n">SetEnvironmentVariable</span><span class="p">(</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  <span class="s2">&quot;Path&quot;</span><span class="p">,</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>  <span class="nv">$env:Path</span> <span class="p">+</span> <span class="s2">&quot;;C:\Users\&lt;username&gt;\Downloads\cdsw-2.0.0.xxxxx-windows-amd64&quot;</span><span class="p">,</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>  <span class="s2">&quot;User&quot;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="p">)</span>
+</code></pre></div>
+<p><strong>3. Restart your terminal</strong>, then verify:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">cdswctl</span> <span class="p">-</span><span class="n">-help</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Windows GUI Alternative</p>
+<p>You can also add the folder via <strong>Settings → System → About → Advanced system settings → Environment Variables</strong>, then edit the <strong>User</strong> variable <code>Path</code> and add the folder containing <code>cdswctl.exe</code>.</p>
+</div>
 <h3 id="7-create-an-api-key">7. Create an API Key<a class="headerlink" href="#7-create-an-api-key" title="Permanent link">&para;</a></h3>
 <p>In the Cloudera AI Workbench, go to <strong>User Settings → Keys &amp; Access → API Keys</strong> and click <strong>Create API Key</strong>.</p>
 <p><img alt="Create API Key" src="../../images/cursor-remote-ssh/create-api-key.png" /></p>
@@ -1461,14 +1644,14 @@
 <p><img alt="Copy and save the API key" src="../../images/cursor-remote-ssh/save-api-key.png" /></p>
 <h3 id="8-create-the-ssh-config-entry">8. Create the SSH Config Entry<a class="headerlink" href="#8-create-the-ssh-config-entry" title="Permanent link">&para;</a></h3>
 <p>Add the following entry to <code>~/.ssh/config</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Host cai-workbench
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    HostName localhost
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    Port 3735
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    User cdsw
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    IdentityFile ~/.ssh/cai
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    StrictHostKeyChecking no
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    ServerAliveInterval 60
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    ServerAliveCountMax 10
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Host cai-workbench
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    HostName localhost
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    Port 3735
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    User cdsw
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    IdentityFile ~/.ssh/cai
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    StrictHostKeyChecking no
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    ServerAliveInterval 60
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    ServerAliveCountMax 10
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Port Changes Each Session</p>
@@ -1478,24 +1661,22 @@
 <h2 id="every-session-steps">Every-session Steps<a class="headerlink" href="#every-session-steps" title="Permanent link">&para;</a></h2>
 <h3 id="1-log-in-to-cai-workbench-remotely">1. Log In to CAI Workbench Remotely<a class="headerlink" href="#1-log-in-to-cai-workbench-remotely" title="Permanent link">&para;</a></h3>
 <p>Use the <strong>API key</strong> you saved in your notepad during one-time setup:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>cdswctl<span class="w"> </span>login<span class="w"> </span>-u<span class="w"> </span>https://ml-9a676736-b27.zeta1-cd.z30z-14kp.cloudera.site<span class="w"> </span>-n<span class="w"> </span>&lt;username&gt;<span class="w"> </span>-y<span class="w"> </span>&lt;api<span class="w"> </span>key<span class="w"> </span>you<span class="w"> </span>copied<span class="w"> </span><span class="k">in</span><span class="w"> </span>notepad&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>cdswctl<span class="w"> </span>login<span class="w"> </span>-u<span class="w"> </span>https://ml-9a676736-b27.zeta1-cd.z30z-14kp.cloudera.site<span class="w"> </span>-n<span class="w"> </span>&lt;username&gt;<span class="w"> </span>-y<span class="w"> </span>&lt;api<span class="w"> </span>key<span class="w"> </span>you<span class="w"> </span>copied<span class="w"> </span><span class="k">in</span><span class="w"> </span>notepad&gt;
 </code></pre></div>
 <p>Replace <code>&lt;username&gt;</code> with your Cloudera AI username and paste the API key you saved earlier.</p>
-<p>If Mac prevents you from running the <code>cdswctl</code> command, remove the quarantine attribute:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>xattr<span class="w"> </span>-d<span class="w"> </span>com.apple.quarantine<span class="w"> </span>/&lt;PATH&gt;/cdswctl
-</code></pre></div>
+<p>If Mac still blocks <code>cdswctl</code>, revisit <a href="#mac-allow-cdswctl-to-run">step 5 — Allow cdswctl to Run</a> in the one-time setup.</p>
 <p>Wait for <strong>"Login succeeded."</strong></p>
 <h3 id="2-start-the-endpoint">2. Start the Endpoint<a class="headerlink" href="#2-start-the-endpoint" title="Permanent link">&para;</a></h3>
 <p>Spin up a session with the following command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>cdswctl<span class="w"> </span>ssh-endpoint<span class="w"> </span>-p<span class="w"> </span>&lt;your-user-name/your-project-name&gt;<span class="w"> </span>-r<span class="w"> </span><span class="m">127</span><span class="w"> </span>-c<span class="w"> </span><span class="m">4</span><span class="w"> </span>-m<span class="w"> </span><span class="m">8</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>cdswctl<span class="w"> </span>ssh-endpoint<span class="w"> </span>-p<span class="w"> </span>&lt;your-user-name/your-project-name&gt;<span class="w"> </span>-r<span class="w"> </span><span class="m">127</span><span class="w"> </span>-c<span class="w"> </span><span class="m">4</span><span class="w"> </span>-m<span class="w"> </span><span class="m">8</span>
 </code></pre></div>
 <p>Replace <code>&lt;your-user-name/your-project-name&gt;</code> with your actual username and project name (e.g., <code>vishrajagopalan/test</code>). It takes a minute or two for the session to start.</p>
 <p>You can verify from the CAI Workbench <strong>Project → Sessions</strong> tab that the new session has been created.</p>
 <p><img alt="Session created in CAI Workbench" src="../../images/cursor-remote-ssh/ssh-endpoint-session.png" /></p>
 <h3 id="3-read-the-port">3. Read the Port<a class="headerlink" href="#3-read-the-port" title="Permanent link">&para;</a></h3>
 <p>The command prints connection details:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>You can SSH to the session using
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    ssh -p &lt;PORT&gt; cdsw@localhost
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>You can SSH to the session using
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    ssh -p &lt;PORT&gt; cdsw@localhost
 </code></pre></div>
 <p>Leave this terminal open — this process is the tunnel.</p>
 <p><img alt="SSH endpoint port output" src="../../images/cursor-remote-ssh/ssh-endpoint-port.png" /></p>
@@ -1503,7 +1684,7 @@
 <p>If <code>&lt;PORT&gt;</code> differs from what is saved in <code>~/.ssh/config</code> (it changes every session), edit the <code>Port</code> line under <code>cai-workbench</code> to match.</p>
 <h3 id="5-sanity-check-optional">5. Sanity Check (Optional)<a class="headerlink" href="#5-sanity-check-optional" title="Permanent link">&para;</a></h3>
 <p>In a second terminal:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ssh<span class="w"> </span>-p<span class="w"> </span>&lt;PORT&gt;<span class="w"> </span>cdsw@localhost
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>ssh<span class="w"> </span>-p<span class="w"> </span>&lt;PORT&gt;<span class="w"> </span>cdsw@localhost
 </code></pre></div>
 <p>Run <code>whoami</code> — it should return <code>&lt;username&gt;</code>. Type <code>exit</code> to leave.</p>
 <h3 id="6-connect-in-cursor">6. Connect in Cursor<a class="headerlink" href="#6-connect-in-cursor" title="Permanent link">&para;</a></h3>
@@ -1526,48 +1707,48 @@
 <p>In the Cursor window connected to your remote Cloudera project, press <strong>Cmd+L</strong> (Mac) or <strong>Ctrl+L</strong> (Windows/Linux) to start a <strong>New Agent</strong> window.</p>
 <h3 id="2-enter-the-test-prompt">2. Enter the Test Prompt<a class="headerlink" href="#2-enter-the-test-prompt" title="Permanent link">&para;</a></h3>
 <p>Copy and paste the following prompt into the Agent window:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ROLE : You are an expert Python .
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>CONTEXT: Your goal is to build a sample ML Pipeline on a customer user case
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>INSTRUCTIONS :
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>1. Create a sample dataset that will be helpful in predicting customer churn
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>2. Insert that data into a table. Here is a sample way to connect to the datalake
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>import cml.data_v1 as cmldata
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>CONNECTION_NAME = &quot;default-impala-aws&quot;
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>conn = cmldata.get_connection(CONNECTION_NAME)
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>## Sample Usage to get pandas data frame
-<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>EXAMPLE_SQL_QUERY = &quot;show databases&quot;
-<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>dataframe = conn.get_pandas_dataframe(EXAMPLE_SQL_QUERY)
-<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>print(dataframe)
-<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a># Closing the connection
-<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>conn.close()
-<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>
-<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>## Other Usage Notes:
-<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>
-<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>## Alternate Sample Usage to provide different credentials as optional parameters
-<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>#conn = cmldata.get_connection(
-<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>#    CONNECTION_NAME, {&quot;USERNAME&quot;: &quot;someuser&quot;, &quot;PASSWORD&quot;: &quot;somepassword&quot;}
-<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>#)
-<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>
-<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>## Alternate Sample Usage to get DB API Connection interface
-<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>#db_conn = conn.get_base_connection()
-<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>
-<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>## Alternate Sample Usage to get DB API Cursor interface
-<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>#db_cursor = conn.get_cursor()
-<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>#db_cursor.execute(EXAMPLE_SQL_QUERY)
-<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>#for row in db_cursor:
-<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>#  print(row)
-<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a>
-<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>3. Now use this data to build a sample customer churn model with scikitlearn
-<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>4. Use unseen data build customer churn
-<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a>
-<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a>FINAL INSTRUCTIONS: Create a Ipython notebook, with good documentation to show my users how this whole process has worked out.
-<a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a>
-<a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a>OUTCOME EXPECTED :
-<a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a>An Ipython Notebook which shows a classical Machine Learning Pipeline with data stored in the DataLake, by ingesting, transforming and then predicting customer churn
-<a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a>
-<a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a>Let me know if you have any questions. Also test whether you are able to create a dummy table and insert some sample rows before you begin this task.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>ROLE : You are an expert Python .
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>CONTEXT: Your goal is to build a sample ML Pipeline on a customer user case
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>INSTRUCTIONS :
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>1. Create a sample dataset that will be helpful in predicting customer churn
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>2. Insert that data into a table. Here is a sample way to connect to the datalake
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>import cml.data_v1 as cmldata
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>CONNECTION_NAME = &quot;default-impala-aws&quot;
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>conn = cmldata.get_connection(CONNECTION_NAME)
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>## Sample Usage to get pandas data frame
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>EXAMPLE_SQL_QUERY = &quot;show databases&quot;
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>dataframe = conn.get_pandas_dataframe(EXAMPLE_SQL_QUERY)
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>print(dataframe)
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a># Closing the connection
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>conn.close()
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>
+<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>## Other Usage Notes:
+<a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>
+<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>## Alternate Sample Usage to provide different credentials as optional parameters
+<a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>#conn = cmldata.get_connection(
+<a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>#    CONNECTION_NAME, {&quot;USERNAME&quot;: &quot;someuser&quot;, &quot;PASSWORD&quot;: &quot;somepassword&quot;}
+<a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>#)
+<a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a>
+<a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a>## Alternate Sample Usage to get DB API Connection interface
+<a id="__codelineno-21-26" name="__codelineno-21-26" href="#__codelineno-21-26"></a>#db_conn = conn.get_base_connection()
+<a id="__codelineno-21-27" name="__codelineno-21-27" href="#__codelineno-21-27"></a>
+<a id="__codelineno-21-28" name="__codelineno-21-28" href="#__codelineno-21-28"></a>## Alternate Sample Usage to get DB API Cursor interface
+<a id="__codelineno-21-29" name="__codelineno-21-29" href="#__codelineno-21-29"></a>#db_cursor = conn.get_cursor()
+<a id="__codelineno-21-30" name="__codelineno-21-30" href="#__codelineno-21-30"></a>#db_cursor.execute(EXAMPLE_SQL_QUERY)
+<a id="__codelineno-21-31" name="__codelineno-21-31" href="#__codelineno-21-31"></a>#for row in db_cursor:
+<a id="__codelineno-21-32" name="__codelineno-21-32" href="#__codelineno-21-32"></a>#  print(row)
+<a id="__codelineno-21-33" name="__codelineno-21-33" href="#__codelineno-21-33"></a>
+<a id="__codelineno-21-34" name="__codelineno-21-34" href="#__codelineno-21-34"></a>3. Now use this data to build a sample customer churn model with scikitlearn
+<a id="__codelineno-21-35" name="__codelineno-21-35" href="#__codelineno-21-35"></a>4. Use unseen data build customer churn
+<a id="__codelineno-21-36" name="__codelineno-21-36" href="#__codelineno-21-36"></a>
+<a id="__codelineno-21-37" name="__codelineno-21-37" href="#__codelineno-21-37"></a>FINAL INSTRUCTIONS: Create a Ipython notebook, with good documentation to show my users how this whole process has worked out.
+<a id="__codelineno-21-38" name="__codelineno-21-38" href="#__codelineno-21-38"></a>
+<a id="__codelineno-21-39" name="__codelineno-21-39" href="#__codelineno-21-39"></a>OUTCOME EXPECTED :
+<a id="__codelineno-21-40" name="__codelineno-21-40" href="#__codelineno-21-40"></a>An Ipython Notebook which shows a classical Machine Learning Pipeline with data stored in the DataLake, by ingesting, transforming and then predicting customer churn
+<a id="__codelineno-21-41" name="__codelineno-21-41" href="#__codelineno-21-41"></a>
+<a id="__codelineno-21-42" name="__codelineno-21-42" href="#__codelineno-21-42"></a>Let me know if you have any questions. Also test whether you are able to create a dummy table and insert some sample rows before you begin this task.
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">This May Take a Few Minutes</p>
