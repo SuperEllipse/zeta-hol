@@ -165,6 +165,27 @@ cdswctl --help
 
 You should see the `cdswctl` usage output without a "command not found" error.
 
+!!! note "Mac Apple Silicon: bad CPU type in executable"
+    If `cdswctl --help` returns:
+
+    ```text
+    zsh: bad CPU type in executable: cdswctl
+    ```
+
+    The downloaded binary is Intel-only and your Mac needs Rosetta. Install it (one-time):
+
+    ```bash
+    softwareupdate --install-rosetta
+    ```
+
+    Then rerun:
+
+    ```bash
+    cdswctl --help
+    ```
+
+    This step is only needed if you see the **bad CPU type** error above.
+
 #### Windows (PowerShell)
 
 **1. Get the folder path**
@@ -275,18 +296,34 @@ You can SSH to the session using
 
 Leave this terminal open — this process is the tunnel.
 
-![SSH endpoint port output](../images/cursor-remote-ssh/ssh-endpoint-port.png)
-
 ### 4. Update the Port in SSH Config
 
 If `<PORT>` differs from what is saved in `~/.ssh/config` (it changes every session), edit the `Port` line under `cai-workbench` to match.
+
+Open `~/.ssh/config` using any of these commands on Mac:
+
+```bash
+nano ~/.ssh/config
+```
+
+```bash
+vi ~/.ssh/config
+```
+
+```bash
+open -e ~/.ssh/config
+```
+
+Update the `Port` value under the `Host cai-workbench` block to the `<PORT>` number printed in step 3.
+
+![SSH endpoint port output](../images/cursor-remote-ssh/ssh-endpoint-port.png)
 
 ### 5. Sanity Check (Optional)
 
 In a second terminal:
 
 ```bash
-ssh -p <PORT> cdsw@localhost
+ssh -i ~/.ssh/cai -p <PORT> cdsw@localhost
 ```
 
 Run `whoami` — it should return `<username>`. Type `exit` to leave.
