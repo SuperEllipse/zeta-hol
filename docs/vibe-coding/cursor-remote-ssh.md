@@ -30,6 +30,13 @@ Press **Enter** to skip the passphrase prompts (leave both empty).
 
 ### 2. Move the Keys to `~/.ssh/`
 
+If the `~/.ssh/` directory does not exist yet (common on a new machine), create it first:
+
+```bash
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+```
+
 Move the generated private and public key files into your SSH directory:
 
 ```bash
