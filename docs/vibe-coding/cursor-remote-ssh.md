@@ -16,21 +16,45 @@ Before connecting, ensure you have:
 
 ### 1. Generate an SSH Key
 
+Run the following command to generate a new SSH key pair:
+
 ```bash
 ssh-keygen -C cai
 ```
 
-Accept the default location, or set the file to `/Users/<username>/.ssh/id_cai`. Optionally set a passphrase.
+When prompted **"Enter file in which to save the key"**, type `cai` (this creates the key in your current directory rather than the default location).
 
-### 2. Copy the Public Key
+Press **Enter** to skip the passphrase prompts (leave both empty).
+
+![Generate SSH key with ssh-keygen](../images/cursor-remote-ssh/ssh-keygen-cai.png)
+
+### 2. Move the Keys to `~/.ssh/`
+
+Move the generated private and public key files into your SSH directory:
 
 ```bash
-cat ~/.ssh/id_cai.pub
+mv cai* ~/.ssh/
+```
+
+Verify the keys are no longer in your current directory:
+
+```bash
+ls ~/.ssh/cai*
+```
+
+You should see `~/.ssh/cai` (private key) and `~/.ssh/cai.pub` (public key).
+
+![Move cai keys to ~/.ssh](../images/cursor-remote-ssh/move-cai-keys.png)
+
+### 3. Copy the Public Key
+
+```bash
+cat ~/.ssh/cai.pub
 ```
 
 Copy the entire output line.
 
-### 3. Add the Key to the Workbench
+### 4. Add the Key to the Workbench
 
 In the Cloudera AI Workbench, go to **User Settings → Keys & Access → Remote Editing**, paste your public key into **SSH Public Key**, and click **Add**.
 
@@ -38,7 +62,7 @@ In the Cloudera AI Workbench, go to **User Settings → Keys & Access → Remote
 
 ![SSH key fingerprint after adding](../images/cursor-remote-ssh/remote-editing-key-added.png)
 
-### 4. Download the CML CLI Client
+### 5. Download the CML CLI Client
 
 On the same **Remote Editing** page, download the **CML CLI client** (`cdswctl`) for your operating system.
 
@@ -48,19 +72,26 @@ On Mac, if the download is blocked: **Finder → Control-click → Open**.
 
 ![Unblock cdswctl on Mac](../images/cursor-remote-ssh/cdswctl-mac-unblock.png)
 
-### 5. Add cdswctl to Your PATH
+### 6. Add cdswctl to Your PATH
 
 After downloading, unpack the archive and optionally add `cdswctl` to your system `PATH` environment variable.
 
-### 6. Get Your Legacy API Key
+### 7. Create an API Key
 
-In the Cloudera AI Workbench, go to **User Settings → Keys & Access → API Keys** and copy the **Legacy API Key** (not the plain "API Key").
+In the Cloudera AI Workbench, go to **User Settings → Keys & Access → API Keys** and click **Create API Key**.
 
-Please feel free to **Rotate** the key as needed.
+![Create API Key](../images/cursor-remote-ssh/create-api-key.png)
 
-![Copy Legacy API Key](../images/cursor-remote-ssh/legacy-api-key.png)
+In the confirmation dialog, accept the default expiry settings (ensure **API** is checked under Audiences) and click **Create**.
 
-### 7. Create the SSH Config Entry
+![Confirm create API Key](../images/cursor-remote-ssh/confirm-create-api-key.png)
+
+!!! warning "Save Your API Key Immediately"
+    API keys are **ephemeral** — they are shown only once. Copy the generated API key and save it in a notepad or password manager. You will need this key every time you log in with `cdswctl`.
+
+![Copy and save the API key](../images/cursor-remote-ssh/save-api-key.png)
+
+### 8. Create the SSH Config Entry
 
 Add the following entry to `~/.ssh/config`:
 
@@ -69,7 +100,7 @@ Host cai-workbench
     HostName localhost
     Port 3735
     User cdsw
-    IdentityFile ~/.ssh/id_cai
+    IdentityFile ~/.ssh/cai
     StrictHostKeyChecking no
     ServerAliveInterval 60
     ServerAliveCountMax 10
@@ -84,11 +115,13 @@ Host cai-workbench
 
 ### 1. Log In to CAI Workbench Remotely
 
-Use the **Legacy API Key**, not the API Key ID:
+Use the **API key** you saved in your notepad during one-time setup:
 
 ```bash
-cdswctl login -u https://<workbench-url> -n <username> -y <legacy_api_key>
+cdswctl login -u https://ml-9a676736-b27.zeta1-cd.z30z-14kp.cloudera.site -n <username> -y <api key you copied in notepad>
 ```
+
+Replace `<username>` with your Cloudera AI username and paste the API key you saved earlier.
 
 If Mac prevents you from running the `cdswctl` command, remove the quarantine attribute:
 
@@ -100,17 +133,13 @@ Wait for **"Login succeeded."**
 
 ### 2. Start the Endpoint
 
-This creates the session and SSH tunnel. First, list available runtimes:
+Spin up a session with the following command:
 
 ```bash
-cdswctl runtimes list
+cdswctl ssh-endpoint -p <your-user-name/your-project-name> -r 127 -c 4 -m 8
 ```
 
-Spin up a session using a specific runtime. For example, `-r 116` corresponds to **PBJ Workbench / Python 3.10**. It takes a minute or two:
-
-```bash
-cdswctl ssh-endpoint -p <username>/<cai_workbench_project_name> -r 116 -c 2 -m 4
-```
+Replace `<your-user-name/your-project-name>` with your actual username and project name (e.g., `vishrajagopalan/test`). It takes a minute or two for the session to start.
 
 You can verify from the CAI Workbench **Project → Sessions** tab that the new session has been created.
 
@@ -160,6 +189,92 @@ Your SSH connection to the CAI session is ready for use in Cursor.
 Press **Ctrl+C** in the `cdswctl` terminal to shut down the session and stop consuming workbench resources.
 
 ![Session resource cleanup](../images/cursor-remote-ssh/session-resources.png)
+
+---
+
+## Testing Cursor
+
+Once connected to your Cloudera AI project via Remote SSH, you can verify that Cursor works end-to-end by asking the AI Agent to build a sample machine learning pipeline that reads from and writes to the DataLake.
+
+### 1. Open the Agent Window
+
+In the Cursor window connected to your remote Cloudera project, press **Cmd+L** (Mac) or **Ctrl+L** (Windows/Linux) to start a **New Agent** window.
+
+### 2. Enter the Test Prompt
+
+Copy and paste the following prompt into the Agent window:
+
+```text
+ROLE : You are an expert Python .
+CONTEXT: Your goal is to build a sample ML Pipeline on a customer user case
+INSTRUCTIONS :
+1. Create a sample dataset that will be helpful in predicting customer churn
+2. Insert that data into a table. Here is a sample way to connect to the datalake
+import cml.data_v1 as cmldata
+
+CONNECTION_NAME = "default-impala-aws"
+conn = cmldata.get_connection(CONNECTION_NAME)
+
+## Sample Usage to get pandas data frame
+EXAMPLE_SQL_QUERY = "show databases"
+dataframe = conn.get_pandas_dataframe(EXAMPLE_SQL_QUERY)
+print(dataframe)
+# Closing the connection
+conn.close()
+
+## Other Usage Notes:
+
+## Alternate Sample Usage to provide different credentials as optional parameters
+#conn = cmldata.get_connection(
+#    CONNECTION_NAME, {"USERNAME": "someuser", "PASSWORD": "somepassword"}
+#)
+
+## Alternate Sample Usage to get DB API Connection interface
+#db_conn = conn.get_base_connection()
+
+## Alternate Sample Usage to get DB API Cursor interface
+#db_cursor = conn.get_cursor()
+#db_cursor.execute(EXAMPLE_SQL_QUERY)
+#for row in db_cursor:
+#  print(row)
+
+3. Now use this data to build a sample customer churn model with scikitlearn
+4. Use unseen data build customer churn
+
+FINAL INSTRUCTIONS: Create a Ipython notebook, with good documentation to show my users how this whole process has worked out.
+
+OUTCOME EXPECTED :
+An Ipython Notebook which shows a classical Machine Learning Pipeline with data stored in the DataLake, by ingesting, transforming and then predicting customer churn
+
+Let me know if you have any questions. Also test whether you are able to create a dummy table and insert some sample rows before you begin this task.
+```
+
+!!! note "This May Take a Few Minutes"
+    Cursor will plan and evaluate options before generating the notebook. You may be asked for permissions to run code and save files — approve these prompts to allow the Agent to proceed.
+
+![Cursor Agent planning the ML pipeline](../images/cursor-remote-ssh/cursor-agent-prompt.png)
+
+### 3. Review the Generated Notebook
+
+When the Agent finishes, it creates an IPython notebook (typically `customer_churn_pipeline.ipynb`) in your project directory. Your output should look similar to this [sample notebook generated by Cursor](../artifacts/customer_churn_pipeline.ipynb) — download or open it to explore the full pipeline before running your own.
+
+The notebook demonstrates a full ML pipeline:
+
+1. **Generates** a synthetic customer churn dataset
+2. **Loads** the data into the DataLake (Impala) via `cml.data_v1`
+3. **Ingests** training data back from the lake
+4. **Trains** a scikit-learn model with proper feature preprocessing
+5. **Predicts** churn on unseen holdout customers
+
+![Customer churn pipeline notebook created by Cursor](../images/cursor-remote-ssh/customer-churn-pipeline.png)
+
+### 4. Run and Verify the Notebook
+
+Open `customer_churn_pipeline.ipynb` in Cursor and run the cells sequentially. The notebook installs `scikit-learn` if needed, creates tables in Impala, trains a model, and reports metrics such as ROC-AUC and accuracy on holdout data.
+
+Compare your results against the [sample notebook](../artifacts/customer_churn_pipeline.ipynb) included in this documentation site, or browse it on GitHub at [`artifacts/customer_churn_pipeline.ipynb`](https://github.com/SuperEllipse/zeta-hol/blob/main/artifacts/customer_churn_pipeline.ipynb).
+
+Section 4 (Impala inserts) may take a few minutes to complete.
 
 ---
 
