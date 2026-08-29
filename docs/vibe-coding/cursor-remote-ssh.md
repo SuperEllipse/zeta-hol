@@ -69,19 +69,135 @@ In the Cloudera AI Workbench, go to **User Settings → Keys & Access → Remote
 
 ![SSH key fingerprint after adding](../images/cursor-remote-ssh/remote-editing-key-added.png)
 
-### 5. Download the CML CLI Client
-
-On the same **Remote Editing** page, download the **CML CLI client** (`cdswctl`) for your operating system.
+While you are on the **Remote Editing** page, note that the **CML CLI client** (`cdswctl`) can be downloaded for your operating system — you will do this in the next step.
 
 ![Download cdswctl from Remote Editing](../images/cursor-remote-ssh/download-cdswctl.png)
 
-On Mac, if the download is blocked: **Finder → Control-click → Open**.
+### 5. Download and Unblock the CML CLI Client
 
-![Unblock cdswctl on Mac](../images/cursor-remote-ssh/cdswctl-mac-unblock.png)
+Download the **CML CLI client** (`cdswctl`) for your operating system from the **Remote Editing** section shown in step 4.
+
+Unpack the downloaded archive. You should have a folder containing the `cdswctl` binary (for example, `cdsw-2.0.0.95880-darwin-amd64` on Mac).
+
+#### Mac: Allow cdswctl to Run
+
+macOS quarantines downloaded files and will **not** let you run `cdswctl` directly from the terminal on first use. When you try, you may see a dialog like this — click **Done** (do not click Move to Bin):
+
+![cdswctl blocked by macOS](../images/cursor-remote-ssh/cdswctl-mac-quarantine-blocked.png)
+
+Then allow the binary manually:
+
+1. Open **System Settings → Privacy & Security → Security**
+2. Scroll down until you see a message that **`"cdswctl" was blocked`** to protect your Mac
+3. Click **Allow Anyway**
+
+![Allow cdswctl in Privacy and Security](../images/cursor-remote-ssh/cdswctl-mac-allow-anyway.png)
+
+4. Run `cdswctl` once more from the terminal — macOS may ask you to confirm again; choose **Open**
+
+!!! tip "Alternative: Remove Quarantine via Terminal"
+    If the **Allow Anyway** button does not appear, you can remove the quarantine flag manually:
+
+    ```bash
+    xattr -d com.apple.quarantine /<PATH>/cdswctl
+    ```
 
 ### 6. Add cdswctl to Your PATH
 
-After downloading, unpack the archive and optionally add `cdswctl` to your system `PATH` environment variable.
+Add the folder containing `cdswctl` to your shell `PATH` so you can run it from any directory.
+
+#### Get the Path to cdswctl
+
+In your terminal, change into the folder where you unpacked `cdswctl`, then print the full path:
+
+```bash
+cd /path/to/your/unpacked/cdsw-folder
+pwd
+```
+
+Copy the output — you will use it in the steps below. The folder name will look something like `cdsw-2.0.0.95880-darwin-amd64`.
+
+Verify `cdswctl` is in that folder:
+
+```bash
+ls cdswctl
+```
+
+#### Mac (zsh)
+
+**1. Create `~/.zshrc` if it does not exist**
+
+```bash
+touch ~/.zshrc
+```
+
+**2. Open the file to add your PATH**
+
+Open it in TextEdit for easy editing:
+
+```bash
+open -e ~/.zshrc
+```
+
+Alternatively, edit in the terminal with `nano ~/.zshrc`.
+
+**3. Add your PATH variable**
+
+Paste the following line at the end of the file, replacing the path with the output from `pwd` above:
+
+```bash
+export PATH="/Users/<username>/path/to/cdsw-2.0.0.95880-darwin-amd64:$PATH"
+```
+
+Save the file (**Cmd+S**) and close it.
+
+**4. Load the updated PATH**
+
+```bash
+source ~/.zshrc
+```
+
+**5. Verify**
+
+```bash
+cdswctl --help
+```
+
+You should see the `cdswctl` usage output without a "command not found" error.
+
+#### Windows (PowerShell)
+
+**1. Get the folder path**
+
+In PowerShell, navigate to the unpacked folder and print the path:
+
+```powershell
+cd C:\Users\<username>\Downloads\cdsw-2.0.0.xxxxx-windows-amd64
+(Get-Location).Path
+```
+
+Copy the output path.
+
+**2. Add to your user PATH permanently**
+
+Replace the path below with your copied path:
+
+```powershell
+[Environment]::SetEnvironmentVariable(
+  "Path",
+  $env:Path + ";C:\Users\<username>\Downloads\cdsw-2.0.0.xxxxx-windows-amd64",
+  "User"
+)
+```
+
+**3. Restart your terminal**, then verify:
+
+```powershell
+cdswctl --help
+```
+
+!!! note "Windows GUI Alternative"
+    You can also add the folder via **Settings → System → About → Advanced system settings → Environment Variables**, then edit the **User** variable `Path` and add the folder containing `cdswctl.exe`.
 
 ### 7. Create an API Key
 
@@ -130,11 +246,7 @@ cdswctl login -u https://ml-9a676736-b27.zeta1-cd.z30z-14kp.cloudera.site -n <us
 
 Replace `<username>` with your Cloudera AI username and paste the API key you saved earlier.
 
-If Mac prevents you from running the `cdswctl` command, remove the quarantine attribute:
-
-```bash
-xattr -d com.apple.quarantine /<PATH>/cdswctl
-```
+If Mac still blocks `cdswctl`, revisit [step 5 — Allow cdswctl to Run](#mac-allow-cdswctl-to-run) in the one-time setup.
 
 Wait for **"Login succeeded."**
 
