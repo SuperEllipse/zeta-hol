@@ -1,136 +1,31 @@
-{
-  "dataset": "zeta_hol_sample_metrics",
-  "version": "1.0",
-  "generated_at": "2026-08-28T00:00:00Z",
-  "description": "Sample metric data for Zeta Global Hands-on Lab hackathon",
-  "records": [
-    {
-      "id": 1,
-      "campaign_id": "CMP-1001",
-      "campaign_name": "Summer Email Blast",
-      "channel": "email",
-      "impressions": 125000,
-      "clicks": 3750,
-      "conversions": 412,
-      "spend_usd": 8500.00,
-      "revenue_usd": 24680.50,
-      "date": "2026-08-01"
-    },
-    {
-      "id": 2,
-      "campaign_id": "CMP-1002",
-      "campaign_name": "Mobile App Push",
-      "channel": "push",
-      "impressions": 89000,
-      "clicks": 5340,
-      "conversions": 678,
-      "spend_usd": 4200.00,
-      "revenue_usd": 18920.75,
-      "date": "2026-08-02"
-    },
-    {
-      "id": 3,
-      "campaign_id": "CMP-1003",
-      "campaign_name": "Social Display Retargeting",
-      "channel": "display",
-      "impressions": 340000,
-      "clicks": 6800,
-      "conversions": 890,
-      "spend_usd": 15200.00,
-      "revenue_usd": 42150.00,
-      "date": "2026-08-03"
-    },
-    {
-      "id": 4,
-      "campaign_id": "CMP-1004",
-      "campaign_name": "Search Brand Keywords",
-      "channel": "search",
-      "impressions": 45000,
-      "clicks": 8100,
-      "conversions": 1245,
-      "spend_usd": 9800.00,
-      "revenue_usd": 67890.25,
-      "date": "2026-08-04"
-    },
-    {
-      "id": 5,
-      "campaign_id": "CMP-1005",
-      "campaign_name": "SMS Loyalty Offer",
-      "channel": "sms",
-      "impressions": 22000,
-      "clicks": 4400,
-      "conversions": 556,
-      "spend_usd": 1800.00,
-      "revenue_usd": 12340.00,
-      "date": "2026-08-05"
-    },
-    {
-      "id": 6,
-      "campaign_id": "CMP-1006",
-      "campaign_name": "Connected TV Awareness",
-      "channel": "ctv",
-      "impressions": 520000,
-      "clicks": 4160,
-      "conversions": 312,
-      "spend_usd": 28500.00,
-      "revenue_usd": 15670.00,
-      "date": "2026-08-06"
-    },
-    {
-      "id": 7,
-      "campaign_id": "CMP-1007",
-      "campaign_name": "In-App Interstitial",
-      "channel": "in_app",
-      "impressions": 178000,
-      "clicks": 7120,
-      "conversions": 945,
-      "spend_usd": 6300.00,
-      "revenue_usd": 31205.50,
-      "date": "2026-08-07"
-    },
-    {
-      "id": 8,
-      "campaign_id": "CMP-1008",
-      "campaign_name": "Programmatic Video",
-      "channel": "video",
-      "impressions": 410000,
-      "clicks": 12300,
-      "conversions": 567,
-      "spend_usd": 19800.00,
-      "revenue_usd": 28450.75,
-      "date": "2026-08-08"
-    },
-    {
-      "id": 9,
-      "campaign_id": "CMP-1009",
-      "campaign_name": "Affiliate Partner Network",
-      "channel": "affiliate",
-      "impressions": 67000,
-      "clicks": 4690,
-      "conversions": 823,
-      "spend_usd": 5500.00,
-      "revenue_usd": 39875.00,
-      "date": "2026-08-09"
-    },
-    {
-      "id": 10,
-      "campaign_id": "CMP-1010",
-      "campaign_name": "Direct Mail Follow-up",
-      "channel": "direct_mail",
-      "impressions": 15000,
-      "clicks": 2250,
-      "conversions": 389,
-      "spend_usd": 7200.00,
-      "revenue_usd": 22100.00,
-      "date": "2026-08-10"
+[
+  {
+    "metric_ts": "2026-08-11T16:05:00Z",
+    "service_name": "payment-gateway",
+    "environment": "production",
+    "metric_name": "http_request_duration_seconds",
+    "metric_type": "histogram",
+    "value": 2.45,
+    "status": "critical",
+    "tags": {
+      "endpoint": "/v1/charge",
+      "method": "POST",
+      "status_code": 504,
+      "region": "us-east-1"
     }
-  ],
-  "summary": {
-    "total_records": 10,
-    "total_impressions": 2011000,
-    "total_clicks": 70910,
-    "total_conversions": 6817,
-    "total_spend_usd": 106800.00,
-    "total_revenue_usd": 303282.75
+  },
+  {
+    "metric_ts": "2026-08-11T16:05:10Z",
+    "service_name": "auth-service",
+    "environment": "production",
+    "metric_name": "cpu_utilization_percentage",
+    "metric_type": "gauge",
+    "value": 88.2,
+    "status": "warning",
+    "tags": {
+      "container_id": "auth-prod-02",
+      "cluster": "kubernetes-main",
+      "region": "us-west-2"
+    }
   }
-}
+]
