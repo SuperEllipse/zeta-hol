@@ -13,10 +13,6 @@
         <link rel="canonical" href="https://superellipse.github.io/zeta-hol/vibe-coding/cursor-remote-ssh/">
       
       
-        <link rel="prev" href="../../setup/project-and-runtimes/">
-      
-      
-        <link rel="next" href="../claude-private-model/">
       
       
         
@@ -27,7 +23,7 @@
     
     
       
-        <title>Cursor with Remote SSH - Zeta Global Hands-on Lab & Hackathon</title>
+        <title>Using Cursor with Cloudera AI (Remote SSH) - Zeta Global Hands-on Lab & Hackathon</title>
       
     
     
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cursor with Remote SSH
+              Using Cursor with Cloudera AI (Remote SSH)
             
           </span>
         </div>
@@ -264,13 +260,18 @@
   
   
   
+  
     
+    
+      
+  
+  
   
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="one-time-setup/" class="md-tabs__link">
           
   
   
@@ -278,6 +279,9 @@
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -514,31 +518,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -556,7 +557,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -571,20 +572,29 @@
                 
   
   
+  
+  
     
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+    
+    
+    
       
       
         
       
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+        
+        
           
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -598,17 +608,35 @@
   
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cursor with Remote SSH
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="one-time-setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Cursor with Remote SSH
+    One-time Setup
   
 
     
@@ -617,363 +645,69 @@
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+              
+            
+              
+                
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="connect-each-session/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
   
+    Connect each session
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
+
+    
+  </span>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#one-time-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        One-time Setup
-      
-    </span>
-  </a>
   
-    <nav class="md-nav" aria-label="One-time Setup">
-      <ul class="md-nav__list">
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="testing-cursor/" class="md-nav__link">
         
-          <li class="md-nav__item">
-  <a href="#1-generate-an-ssh-key" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Generate an SSH Key
-      
-    </span>
-  </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-move-the-keys-to-ssh" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Move the Keys to ~/.ssh/
-      
-    </span>
-  </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-copy-the-public-key" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Copy the Public Key
-      
-    </span>
-  </a>
+  <span class="md-ellipsis">
+    
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-add-the-key-to-the-workbench" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Add the Key to the Workbench
-      
-    </span>
-  </a>
+    Testing Cursor
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-download-and-unblock-the-cml-cli-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Download and Unblock the CML CLI Client
-      
-    </span>
-  </a>
+
+    
+  </span>
   
-    <nav class="md-nav" aria-label="5. Download and Unblock the CML CLI Client">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mac-allow-cdswctl-to-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mac: Allow cdswctl to Run
-      
-    </span>
-  </a>
   
-</li>
-        
-      </ul>
-    </nav>
+
+      </a>
+    </li>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-add-cdswctl-to-your-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Add cdswctl to Your PATH
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Add cdswctl to Your PATH">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-the-path-to-cdswctl" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Get the Path to cdswctl
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mac-zsh" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mac (zsh)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#windows-powershell" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Windows (PowerShell)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-create-an-api-key" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. Create an API Key
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-create-the-ssh-config-entry" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8. Create the SSH Config Entry
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#every-session-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Every-session Steps
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Every-session Steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-log-in-to-cai-workbench-remotely" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Log In to CAI Workbench Remotely
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-start-the-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Start the Endpoint
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-read-the-port" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Read the Port
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-update-the-port-in-ssh-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Update the Port in SSH Config
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-sanity-check-optional" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Sanity Check (Optional)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-connect-in-cursor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Connect in Cursor
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-shut-down-when-done" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. Shut Down When Done
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing-cursor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Testing Cursor
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Testing Cursor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-open-the-agent-window" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Open the Agent Window
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-enter-the-test-prompt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Enter the Test Prompt
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-review-the-generated-notebook" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Review the Generated Notebook
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-run-and-verify-the-notebook" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Run and Verify the Notebook
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alternative-claude-cli" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alternative: Claude CLI
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1158,10 +892,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#quick-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Quick overview
       
     </span>
   </a>
@@ -1169,22 +903,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#your-team-project-is-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your team project is ready
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#one-time-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        One-time Setup
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="One-time Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-generate-an-ssh-key" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Generate an SSH Key
+        One-time setup
       
     </span>
   </a>
@@ -1192,132 +937,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-move-the-keys-to-ssh" class="md-nav__link">
+  <a href="#each-session" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Move the Keys to ~/.ssh/
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-copy-the-public-key" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Copy the Public Key
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-add-the-key-to-the-workbench" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Add the Key to the Workbench
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-download-and-unblock-the-cml-cli-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Download and Unblock the CML CLI Client
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. Download and Unblock the CML CLI Client">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mac-allow-cdswctl-to-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mac: Allow cdswctl to Run
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-add-cdswctl-to-your-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Add cdswctl to Your PATH
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Add cdswctl to Your PATH">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-the-path-to-cdswctl" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Get the Path to cdswctl
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mac-zsh" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mac (zsh)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#windows-powershell" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Windows (PowerShell)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-create-an-api-key" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. Create an API Key
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-create-the-ssh-config-entry" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8. Create the SSH Config Entry
+        Each session
       
     </span>
   </a>
@@ -1330,165 +953,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#every-session-steps" class="md-nav__link">
+  <a href="#quick-links" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Every-session Steps
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Every-session Steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-log-in-to-cai-workbench-remotely" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Log In to CAI Workbench Remotely
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-start-the-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Start the Endpoint
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-read-the-port" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Read the Port
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-update-the-port-in-ssh-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Update the Port in SSH Config
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-sanity-check-optional" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Sanity Check (Optional)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-connect-in-cursor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Connect in Cursor
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-shut-down-when-done" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. Shut Down When Done
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing-cursor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Testing Cursor
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Testing Cursor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-open-the-agent-window" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Open the Agent Window
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-enter-the-test-prompt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Enter the Test Prompt
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-review-the-generated-notebook" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Review the Generated Notebook
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-run-and-verify-the-notebook" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Run and Verify the Notebook
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alternative-claude-cli" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alternative: Claude CLI
+        Quick links
       
     </span>
   </a>
@@ -1516,284 +984,80 @@
 
 
 <h1 id="using-cursor-with-cloudera-ai-remote-ssh">Using Cursor with Cloudera AI (Remote SSH)<a class="headerlink" href="#using-cursor-with-cloudera-ai-remote-ssh" title="Permanent link">&para;</a></h1>
-<p>This guide explains how to connect <strong>Cursor IDE</strong> to your Cloudera AI workbench session using <strong>Remote SSH</strong> and the <strong>cdswctl</strong> CLI, enabling AI-assisted coding directly against your project environment.</p>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>Before connecting, ensure you have:</p>
+<p>Connect <strong>Cursor IDE</strong> to your Cloudera AI workbench session using <strong>Remote SSH</strong>, so you can use AI-assisted coding directly against your project environment, data connections, and runtimes.</p>
+<p>This guide uses an automated connection script (<code>connect-cursor-cai.sh</code>) that handles login, session startup, SSH tunneling, and SSH config updates for you. The script files are included in this lab guide.</p>
+<h2 id="quick-overview">Quick overview<a class="headerlink" href="#quick-overview" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    subgraph once["One-time setup"]
+        direction LR
+        A["Prerequisites&lt;br/&gt;SSH keys · cdswctl · API key · jq"]
+        B["Download scripts &amp;&lt;br/&gt;configure connect-cai.env"]
+        A --&gt; B
+    end
+
+    subgraph session["Each session"]
+        direction LR
+        C["Run&lt;br/&gt;connect-cursor-cai.sh"]
+        D["SSH tunnel&lt;br/&gt;active"]
+        E["Remote-SSH&lt;br/&gt;in Cursor"]
+        F["Open&lt;br/&gt;/home/cdsw"]
+        C --&gt; D --&gt; E --&gt; F
+    end
+
+    B --&gt; C
+
+    style once fill:#fff3e0,stroke:#e65100,color:#333
+    style session fill:#e3f2fd,stroke:#1565c0,color:#333
+    style A fill:#ffe0b2,stroke:#e65100
+    style F fill:#c8e6c9,stroke:#2e7d32</code></pre>
+<p>After one-time setup, each session is quick: from inside your <code>cai-cursor</code> folder, run <code>CONNECT_CAI_ENV=./connect-cai.env ./connect-cursor-cai.sh</code>, then connect Cursor via <strong>Remote-SSH: Connect to Host</strong> → <code>cai-workbench</code>.</p>
+<hr />
+<h2 id="your-team-project-is-ready">Your team project is ready<a class="headerlink" href="#your-team-project-is-ready" title="Permanent link">&para;</a></h2>
+<p>For this hackathon, <strong>your team project has already been created</strong> for you in the Cloudera AI Workbench. You do not need to create a new project.</p>
+<p>Your facilitator will assign your team number and provide project details for your participant group. Each team gets a pre-created project following the naming pattern <strong><code>teamXX-project</code></strong>, where <code>XX</code> is your assigned team number (e.g. <code>team01-project</code>, <code>team07-project</code>).</p>
+<p><img alt="Example pre-created team project" src="../../images/cursor-remote-ssh/team15-project.png" /></p>
+<p><em>Figure: Example of a pre-created team project. Your project will follow the same <code>teamXX-project</code> pattern — use the team number assigned by your facilitator.</em></p>
+<p>When you open your assigned project, the breadcrumb in the Workbench shows <code>&lt;your-username&gt; / teamXX-project</code>. That means the full project slug for <code>connect-cai.env</code> would be:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">PROJECT_NAME</span><span class="o">=</span><span class="s2">&quot;&lt;your-username&gt;/teamXX-project&quot;</span>
+</code></pre></div>
+<p>Replace <code>&lt;your-username&gt;</code> with your Cloudera AI username and <code>XX</code> with your assigned team number.</p>
+<p>To find <strong>your</strong> project slug:</p>
+<ol>
+<li>Complete <a href="../../setup/login-and-project/">Login &amp; Workbench Setup</a> and open <strong>zeta1-workbench1</strong></li>
+<li>Locate your assigned team project on the workbench home page (named <code>teamXX-project</code> for your team)</li>
+<li>Open the project and copy the <strong>full slug</strong> from the browser URL bar or breadcrumb — it looks like <code>&lt;your-username&gt;/teamXX-project</code></li>
+</ol>
+<p>You will use this slug as <code>PROJECT_NAME</code> in your configuration file.</p>
+<div class="admonition note">
+<p class="admonition-title">Project owner</p>
+<p>The owner in the URL is typically your Cloudera AI username. Always use the exact slug shown in the browser — do not guess the team number or owner.</p>
+</div>
+<hr />
+<h2 id="prerequisites-checklist">Prerequisites checklist<a class="headerlink" href="#prerequisites-checklist" title="Permanent link">&para;</a></h2>
+<p>Complete every item before running the connection script.</p>
+<h3 id="one-time-setup">One-time setup<a class="headerlink" href="#one-time-setup" title="Permanent link">&para;</a></h3>
 <ul>
-<li>[x] Completed <a href="../../setup/login-and-project/">Login &amp; Workbench Setup</a></li>
-<li>[x] Created your team <a href="../../setup/project-and-runtimes/">project</a></li>
-<li>[x] <strong>Cursor IDE</strong> installed on your local machine (<a href="https://cursor.com">cursor.com</a>)</li>
+<li>[ ] Completed <a href="../../setup/login-and-project/">Login &amp; Workbench Setup</a></li>
+<li>[ ] <strong>Cursor IDE</strong> installed on your local machine (<a href="https://cursor.com">cursor.com</a>)</li>
+<li>[ ] SSH key pair generated with filename <strong><code>cai</code></strong> (not <code>id_ed25519</code> or a custom name) and moved to <code>~/.ssh/cai</code> / <code>~/.ssh/cai.pub</code></li>
+<li>[ ] SSH public key added in CAI → <strong>User Settings → Keys &amp; Access → Remote Editing</strong></li>
+<li>[ ] <code>cdswctl</code> downloaded, unblocked (macOS), and on your <code>PATH</code></li>
+<li>[ ] <code>jq</code> installed (<code>brew install jq</code> on macOS)</li>
+<li>[ ] API key created in CAI → <strong>User Settings → Keys &amp; Access → API Keys</strong> (not Legacy)</li>
+<li>[ ] Connection scripts downloaded, <code>chmod +x connect-cursor-cai.sh</code> run, and <code>connect-cai.env</code> configured with your domain, username, API key, and project slug</li>
+</ul>
+<h3 id="each-session">Each session<a class="headerlink" href="#each-session" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Open a terminal in your <code>&lt;your-path&gt;/cai-cursor</code> folder and run <code>CONNECT_CAI_ENV=./connect-cai.env ./connect-cursor-cai.sh</code> (see <a href="connect-each-session/">Connect each session</a> below)</li>
+<li>[ ] Connect Cursor via <strong>Remote-SSH: Connect to Host</strong> → <code>cai-workbench</code>, then click <strong>Open Folder</strong> → <code>/home/cdsw</code></li>
 </ul>
 <hr />
-<h2 id="one-time-setup">One-time Setup<a class="headerlink" href="#one-time-setup" title="Permanent link">&para;</a></h2>
-<h3 id="1-generate-an-ssh-key">1. Generate an SSH Key<a class="headerlink" href="#1-generate-an-ssh-key" title="Permanent link">&para;</a></h3>
-<p>Run the following command to generate a new SSH key pair:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh-keygen<span class="w"> </span>-C<span class="w"> </span>cai
-</code></pre></div>
-<p>When prompted <strong>"Enter file in which to save the key"</strong>, type <code>cai</code> (this creates the key in your current directory rather than the default location).</p>
-<p>Press <strong>Enter</strong> to skip the passphrase prompts (leave both empty).</p>
-<p><img alt="Generate SSH key with ssh-keygen" src="../../images/cursor-remote-ssh/ssh-keygen-cai.png" /></p>
-<h3 id="2-move-the-keys-to-ssh">2. Move the Keys to <code>~/.ssh/</code><a class="headerlink" href="#2-move-the-keys-to-ssh" title="Permanent link">&para;</a></h3>
-<p>If the <code>~/.ssh/</code> directory does not exist yet (common on a new machine), create it first:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.ssh
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>~/.ssh
-</code></pre></div>
-<p>Move the generated private and public key files into your SSH directory:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mv<span class="w"> </span>cai*<span class="w"> </span>~/.ssh/
-</code></pre></div>
-<p>Verify the keys are no longer in your current directory:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ls<span class="w"> </span>~/.ssh/cai*
-</code></pre></div>
-<p>You should see <code>~/.ssh/cai</code> (private key) and <code>~/.ssh/cai.pub</code> (public key).</p>
-<p><img alt="Move cai keys to ~/.ssh" src="../../images/cursor-remote-ssh/move-cai-keys.png" /></p>
-<h3 id="3-copy-the-public-key">3. Copy the Public Key<a class="headerlink" href="#3-copy-the-public-key" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>cat<span class="w"> </span>~/.ssh/cai.pub
-</code></pre></div>
-<p>Copy the entire output line.</p>
-<h3 id="4-add-the-key-to-the-workbench">4. Add the Key to the Workbench<a class="headerlink" href="#4-add-the-key-to-the-workbench" title="Permanent link">&para;</a></h3>
-<p>In the Cloudera AI Workbench, go to <strong>User Settings → Keys &amp; Access → Remote Editing</strong>, paste your public key into <strong>SSH Public Key</strong>, and click <strong>Add</strong>.</p>
-<p><img alt="Add SSH public key in Remote Editing settings" src="../../images/cursor-remote-ssh/remote-editing-ssh-key.png" /></p>
-<p><img alt="SSH key fingerprint after adding" src="../../images/cursor-remote-ssh/remote-editing-key-added.png" /></p>
-<p>While you are on the <strong>Remote Editing</strong> page, note that the <strong>CML CLI client</strong> (<code>cdswctl</code>) can be downloaded for your operating system — you will do this in the next step.</p>
-<p><img alt="Download cdswctl from Remote Editing" src="../../images/cursor-remote-ssh/download-cdswctl.png" /></p>
-<h3 id="5-download-and-unblock-the-cml-cli-client">5. Download and Unblock the CML CLI Client<a class="headerlink" href="#5-download-and-unblock-the-cml-cli-client" title="Permanent link">&para;</a></h3>
-<p>Download the <strong>CML CLI client</strong> (<code>cdswctl</code>) for your operating system from the <strong>Remote Editing</strong> section shown in step 4.</p>
-<p>Unpack the downloaded archive. You should have a folder containing the <code>cdswctl</code> binary (for example, <code>cdsw-2.0.0.95880-darwin-amd64</code> on Mac).</p>
-<h4 id="mac-allow-cdswctl-to-run">Mac: Allow cdswctl to Run<a class="headerlink" href="#mac-allow-cdswctl-to-run" title="Permanent link">&para;</a></h4>
-<p>macOS quarantines downloaded files and will <strong>not</strong> let you run <code>cdswctl</code> directly from the terminal on first use. When you try, you may see a dialog like this — click <strong>Done</strong> (do not click Move to Bin):</p>
-<p><img alt="cdswctl blocked by macOS" src="../../images/cursor-remote-ssh/cdswctl-mac-quarantine-blocked.png" /></p>
-<p>Then allow the binary manually:</p>
-<ol>
-<li>Open <strong>System Settings → Privacy &amp; Security → Security</strong></li>
-<li>Scroll down until you see a message that <strong><code>"cdswctl" was blocked</code></strong> to protect your Mac</li>
-<li>Click <strong>Allow Anyway</strong></li>
-</ol>
-<p><img alt="Allow cdswctl in Privacy and Security" src="../../images/cursor-remote-ssh/cdswctl-mac-allow-anyway.png" /></p>
-<ol>
-<li>Run <code>cdswctl</code> once more from the terminal — macOS may ask you to confirm again; choose <strong>Open</strong></li>
-</ol>
-<div class="admonition tip">
-<p class="admonition-title">Alternative: Remove Quarantine via Terminal</p>
-<p>If the <strong>Allow Anyway</strong> button does not appear, you can remove the quarantine flag manually:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>xattr<span class="w"> </span>-d<span class="w"> </span>com.apple.quarantine<span class="w"> </span>/&lt;PATH&gt;/cdswctl
-</code></pre></div>
-</div>
-<h3 id="6-add-cdswctl-to-your-path">6. Add cdswctl to Your PATH<a class="headerlink" href="#6-add-cdswctl-to-your-path" title="Permanent link">&para;</a></h3>
-<p>Add the folder containing <code>cdswctl</code> to your shell <code>PATH</code> so you can run it from any directory.</p>
-<h4 id="get-the-path-to-cdswctl">Get the Path to cdswctl<a class="headerlink" href="#get-the-path-to-cdswctl" title="Permanent link">&para;</a></h4>
-<p>In your terminal, change into the folder where you unpacked <code>cdswctl</code>, then print the full path:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>/path/to/your/unpacked/cdsw-folder
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">pwd</span>
-</code></pre></div>
-<p>Copy the output — you will use it in the steps below. The folder name will look something like <code>cdsw-2.0.0.95880-darwin-amd64</code>.</p>
-<p>Verify <code>cdswctl</code> is in that folder:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ls<span class="w"> </span>cdswctl
-</code></pre></div>
-<h4 id="mac-zsh">Mac (zsh)<a class="headerlink" href="#mac-zsh" title="Permanent link">&para;</a></h4>
-<p><strong>1. Create <code>~/.zshrc</code> if it does not exist</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>touch<span class="w"> </span>~/.zshrc
-</code></pre></div>
-<p><strong>2. Open the file to add your PATH</strong></p>
-<p>Open it in TextEdit for easy editing:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>open<span class="w"> </span>-e<span class="w"> </span>~/.zshrc
-</code></pre></div>
-<p>Alternatively, edit in the terminal with <code>nano ~/.zshrc</code>.</p>
-<p><strong>3. Add your PATH variable</strong></p>
-<p>Paste the following line at the end of the file, replacing the path with the output from <code>pwd</code> above:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/Users/&lt;username&gt;/path/to/cdsw-2.0.0.95880-darwin-amd64:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
-</code></pre></div>
-<p>Save the file (<strong>Cmd+S</strong>) and close it.</p>
-<p><strong>4. Load the updated PATH</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">source</span><span class="w"> </span>~/.zshrc
-</code></pre></div>
-<p><strong>5. Verify</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>cdswctl<span class="w"> </span>--help
-</code></pre></div>
-<p>You should see the <code>cdswctl</code> usage output without a "command not found" error.</p>
-<div class="admonition note">
-<p class="admonition-title">Mac Apple Silicon: bad CPU type in executable</p>
-<p>If <code>cdswctl --help</code> returns:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>zsh: bad CPU type in executable: cdswctl
-</code></pre></div>
-<p>The downloaded binary is Intel-only and your Mac needs Rosetta. Install it (one-time):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>softwareupdate<span class="w"> </span>--install-rosetta
-</code></pre></div>
-<p>Then rerun:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>cdswctl<span class="w"> </span>--help
-</code></pre></div>
-<p>This step is only needed if you see the <strong>bad CPU type</strong> error above.</p>
-</div>
-<h4 id="windows-powershell">Windows (PowerShell)<a class="headerlink" href="#windows-powershell" title="Permanent link">&para;</a></h4>
-<p><strong>1. Get the folder path</strong></p>
-<p>In PowerShell, navigate to the unpacked folder and print the path:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">Users</span><span class="p">\&lt;</span><span class="n">username</span><span class="p">&gt;\</span><span class="n">Downloads</span><span class="p">\</span><span class="n">cdsw</span><span class="p">-</span><span class="n">2</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">xxxxx-windows-amd64</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="p">(</span><span class="nb">Get-Location</span><span class="p">).</span><span class="n">Path</span>
-</code></pre></div>
-<p>Copy the output path.</p>
-<p><strong>2. Add to your user PATH permanently</strong></p>
-<p>Replace the path below with your copied path:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="no">[Environment]</span><span class="p">::</span><span class="n">SetEnvironmentVariable</span><span class="p">(</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>  <span class="s2">&quot;Path&quot;</span><span class="p">,</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>  <span class="nv">$env:Path</span> <span class="p">+</span> <span class="s2">&quot;;C:\Users\&lt;username&gt;\Downloads\cdsw-2.0.0.xxxxx-windows-amd64&quot;</span><span class="p">,</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>  <span class="s2">&quot;User&quot;</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="p">)</span>
-</code></pre></div>
-<p><strong>3. Restart your terminal</strong>, then verify:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">cdswctl</span> <span class="p">-</span><span class="n">-help</span>
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Windows GUI Alternative</p>
-<p>You can also add the folder via <strong>Settings → System → About → Advanced system settings → Environment Variables</strong>, then edit the <strong>User</strong> variable <code>Path</code> and add the folder containing <code>cdswctl.exe</code>.</p>
-</div>
-<h3 id="7-create-an-api-key">7. Create an API Key<a class="headerlink" href="#7-create-an-api-key" title="Permanent link">&para;</a></h3>
-<p>In the Cloudera AI Workbench, go to <strong>User Settings → Keys &amp; Access → API Keys</strong> and click <strong>Create API Key</strong>.</p>
-<p><img alt="Create API Key" src="../../images/cursor-remote-ssh/create-api-key.png" /></p>
-<p>In the confirmation dialog, accept the default expiry settings (ensure <strong>API</strong> is checked under Audiences) and click <strong>Create</strong>.</p>
-<p><img alt="Confirm create API Key" src="../../images/cursor-remote-ssh/confirm-create-api-key.png" /></p>
-<div class="admonition warning">
-<p class="admonition-title">Save Your API Key Immediately</p>
-<p>API keys are <strong>ephemeral</strong> — they are shown only once. Copy the generated API key and save it in a notepad or password manager. You will need this key every time you log in with <code>cdswctl</code>.</p>
-</div>
-<p><img alt="Copy and save the API key" src="../../images/cursor-remote-ssh/save-api-key.png" /></p>
-<h3 id="8-create-the-ssh-config-entry">8. Create the SSH Config Entry<a class="headerlink" href="#8-create-the-ssh-config-entry" title="Permanent link">&para;</a></h3>
-<p>Add the following entry to <code>~/.ssh/config</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Host cai-workbench
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    HostName localhost
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    Port 3735
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    User cdsw
-<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    IdentityFile ~/.ssh/cai
-<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    StrictHostKeyChecking no
-<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>    ServerAliveInterval 60
-<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>    ServerAliveCountMax 10
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Port Changes Each Session</p>
-<p>The <code>Port</code> value will need updating each session — see step 4 under <a href="#every-session-steps">Every-session Steps</a> below.</p>
-</div>
-<hr />
-<h2 id="every-session-steps">Every-session Steps<a class="headerlink" href="#every-session-steps" title="Permanent link">&para;</a></h2>
-<h3 id="1-log-in-to-cai-workbench-remotely">1. Log In to CAI Workbench Remotely<a class="headerlink" href="#1-log-in-to-cai-workbench-remotely" title="Permanent link">&para;</a></h3>
-<p>Use the <strong>API key</strong> you saved in your notepad during one-time setup:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>cdswctl<span class="w"> </span>login<span class="w"> </span>-u<span class="w"> </span>https://ml-9a676736-b27.zeta1-cd.z30z-14kp.cloudera.site<span class="w"> </span>-n<span class="w"> </span>&lt;username&gt;<span class="w"> </span>-y<span class="w"> </span>&lt;api<span class="w"> </span>key<span class="w"> </span>you<span class="w"> </span>copied<span class="w"> </span><span class="k">in</span><span class="w"> </span>notepad&gt;
-</code></pre></div>
-<p>Replace <code>&lt;username&gt;</code> with your Cloudera AI username and paste the API key you saved earlier.</p>
-<p>If Mac still blocks <code>cdswctl</code>, revisit <a href="#mac-allow-cdswctl-to-run">step 5 — Allow cdswctl to Run</a> in the one-time setup.</p>
-<p>Wait for <strong>"Login succeeded."</strong></p>
-<h3 id="2-start-the-endpoint">2. Start the Endpoint<a class="headerlink" href="#2-start-the-endpoint" title="Permanent link">&para;</a></h3>
-<p>Spin up a session with the following command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>cdswctl<span class="w"> </span>ssh-endpoint<span class="w"> </span>-p<span class="w"> </span>&lt;your-user-name/your-project-name&gt;<span class="w"> </span>-r<span class="w"> </span><span class="m">127</span><span class="w"> </span>-c<span class="w"> </span><span class="m">4</span><span class="w"> </span>-m<span class="w"> </span><span class="m">8</span>
-</code></pre></div>
-<p>Replace <code>&lt;your-user-name/your-project-name&gt;</code> with your actual username and project name (e.g., <code>vishrajagopalan/test</code>). It takes a minute or two for the session to start.</p>
-<p>You can verify from the CAI Workbench <strong>Project → Sessions</strong> tab that the new session has been created.</p>
-<p><img alt="Session created in CAI Workbench" src="../../images/cursor-remote-ssh/ssh-endpoint-session.png" /></p>
-<h3 id="3-read-the-port">3. Read the Port<a class="headerlink" href="#3-read-the-port" title="Permanent link">&para;</a></h3>
-<p>The command prints connection details:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>You can SSH to the session using
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    ssh -p &lt;PORT&gt; cdsw@localhost
-</code></pre></div>
-<p>Leave this terminal open — this process is the tunnel.</p>
-<h3 id="4-update-the-port-in-ssh-config">4. Update the Port in SSH Config<a class="headerlink" href="#4-update-the-port-in-ssh-config" title="Permanent link">&para;</a></h3>
-<p>If <code>&lt;PORT&gt;</code> differs from what is saved in <code>~/.ssh/config</code> (it changes every session), edit the <code>Port</code> line under <code>cai-workbench</code> to match.</p>
-<p>Open <code>~/.ssh/config</code> using any of these commands on Mac:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>nano<span class="w"> </span>~/.ssh/config
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>vi<span class="w"> </span>~/.ssh/config
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>open<span class="w"> </span>-e<span class="w"> </span>~/.ssh/config
-</code></pre></div>
-<p>Update the <code>Port</code> value under the <code>Host cai-workbench</code> block to the <code>&lt;PORT&gt;</code> number printed in step 3.</p>
-<p><img alt="SSH endpoint port output" src="../../images/cursor-remote-ssh/ssh-endpoint-port.png" /></p>
-<h3 id="5-sanity-check-optional">5. Sanity Check (Optional)<a class="headerlink" href="#5-sanity-check-optional" title="Permanent link">&para;</a></h3>
-<p>In a second terminal:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>ssh<span class="w"> </span>-i<span class="w"> </span>~/.ssh/cai<span class="w"> </span>-p<span class="w"> </span>&lt;PORT&gt;<span class="w"> </span>cdsw@localhost
-</code></pre></div>
-<p>Run <code>whoami</code> — it should return <code>&lt;username&gt;</code>. Type <code>exit</code> to leave.</p>
-<h3 id="6-connect-in-cursor">6. Connect in Cursor<a class="headerlink" href="#6-connect-in-cursor" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Press <strong>Cmd+Shift+P</strong> (Mac) or <strong>Ctrl+Shift+P</strong> (Windows/Linux)</li>
-<li>Select <strong>Connect via SSH: Connect to Host</strong></li>
-<li>Choose <strong><code>cai-workbench</code></strong></li>
-<li>Enter your key passphrase if prompted</li>
-<li><strong>File → Open Folder → <code>/home/cdsw</code></strong></li>
-</ol>
-<p><img alt="Cursor connected to CAI session via SSH" src="../../images/cursor-remote-ssh/cursor-ssh-connected.png" /></p>
-<p>Your SSH connection to the CAI session is ready for use in Cursor.</p>
-<h3 id="7-shut-down-when-done">7. Shut Down When Done<a class="headerlink" href="#7-shut-down-when-done" title="Permanent link">&para;</a></h3>
-<p>Press <strong>Ctrl+C</strong> in the <code>cdswctl</code> terminal to shut down the session and stop consuming workbench resources.</p>
-<p><img alt="Session resource cleanup" src="../../images/cursor-remote-ssh/session-resources.png" /></p>
-<hr />
-<h2 id="testing-cursor">Testing Cursor<a class="headerlink" href="#testing-cursor" title="Permanent link">&para;</a></h2>
-<p>Once connected to your Cloudera AI project via Remote SSH, you can verify that Cursor works end-to-end by asking the AI Agent to build a sample machine learning pipeline that reads from and writes to the DataLake.</p>
-<h3 id="1-open-the-agent-window">1. Open the Agent Window<a class="headerlink" href="#1-open-the-agent-window" title="Permanent link">&para;</a></h3>
-<p>In the Cursor window connected to your remote Cloudera project, press <strong>Cmd+L</strong> (Mac) or <strong>Ctrl+L</strong> (Windows/Linux) to start a <strong>New Agent</strong> window.</p>
-<h3 id="2-enter-the-test-prompt">2. Enter the Test Prompt<a class="headerlink" href="#2-enter-the-test-prompt" title="Permanent link">&para;</a></h3>
-<p>Copy and paste the following prompt into the Agent window:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>ROLE : You are an expert Python .
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>CONTEXT: Your goal is to build a sample ML Pipeline on a customer user case
-<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>INSTRUCTIONS :
-<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>1. Create a sample dataset that will be helpful in predicting customer churn
-<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>2. Insert that data into a table. Here is a sample way to connect to the datalake
-<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>import cml.data_v1 as cmldata
-<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>
-<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>CONNECTION_NAME = &quot;default-impala-aws&quot;
-<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>conn = cmldata.get_connection(CONNECTION_NAME)
-<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>
-<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>## Sample Usage to get pandas data frame
-<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>EXAMPLE_SQL_QUERY = &quot;show databases&quot;
-<a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a>dataframe = conn.get_pandas_dataframe(EXAMPLE_SQL_QUERY)
-<a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a>print(dataframe)
-<a id="__codelineno-27-15" name="__codelineno-27-15" href="#__codelineno-27-15"></a># Closing the connection
-<a id="__codelineno-27-16" name="__codelineno-27-16" href="#__codelineno-27-16"></a>conn.close()
-<a id="__codelineno-27-17" name="__codelineno-27-17" href="#__codelineno-27-17"></a>
-<a id="__codelineno-27-18" name="__codelineno-27-18" href="#__codelineno-27-18"></a>## Other Usage Notes:
-<a id="__codelineno-27-19" name="__codelineno-27-19" href="#__codelineno-27-19"></a>
-<a id="__codelineno-27-20" name="__codelineno-27-20" href="#__codelineno-27-20"></a>## Alternate Sample Usage to provide different credentials as optional parameters
-<a id="__codelineno-27-21" name="__codelineno-27-21" href="#__codelineno-27-21"></a>#conn = cmldata.get_connection(
-<a id="__codelineno-27-22" name="__codelineno-27-22" href="#__codelineno-27-22"></a>#    CONNECTION_NAME, {&quot;USERNAME&quot;: &quot;someuser&quot;, &quot;PASSWORD&quot;: &quot;somepassword&quot;}
-<a id="__codelineno-27-23" name="__codelineno-27-23" href="#__codelineno-27-23"></a>#)
-<a id="__codelineno-27-24" name="__codelineno-27-24" href="#__codelineno-27-24"></a>
-<a id="__codelineno-27-25" name="__codelineno-27-25" href="#__codelineno-27-25"></a>## Alternate Sample Usage to get DB API Connection interface
-<a id="__codelineno-27-26" name="__codelineno-27-26" href="#__codelineno-27-26"></a>#db_conn = conn.get_base_connection()
-<a id="__codelineno-27-27" name="__codelineno-27-27" href="#__codelineno-27-27"></a>
-<a id="__codelineno-27-28" name="__codelineno-27-28" href="#__codelineno-27-28"></a>## Alternate Sample Usage to get DB API Cursor interface
-<a id="__codelineno-27-29" name="__codelineno-27-29" href="#__codelineno-27-29"></a>#db_cursor = conn.get_cursor()
-<a id="__codelineno-27-30" name="__codelineno-27-30" href="#__codelineno-27-30"></a>#db_cursor.execute(EXAMPLE_SQL_QUERY)
-<a id="__codelineno-27-31" name="__codelineno-27-31" href="#__codelineno-27-31"></a>#for row in db_cursor:
-<a id="__codelineno-27-32" name="__codelineno-27-32" href="#__codelineno-27-32"></a>#  print(row)
-<a id="__codelineno-27-33" name="__codelineno-27-33" href="#__codelineno-27-33"></a>
-<a id="__codelineno-27-34" name="__codelineno-27-34" href="#__codelineno-27-34"></a>3. Now use this data to build a sample customer churn model with scikitlearn
-<a id="__codelineno-27-35" name="__codelineno-27-35" href="#__codelineno-27-35"></a>4. Use unseen data build customer churn
-<a id="__codelineno-27-36" name="__codelineno-27-36" href="#__codelineno-27-36"></a>
-<a id="__codelineno-27-37" name="__codelineno-27-37" href="#__codelineno-27-37"></a>FINAL INSTRUCTIONS: Create a Ipython notebook, with good documentation to show my users how this whole process has worked out.
-<a id="__codelineno-27-38" name="__codelineno-27-38" href="#__codelineno-27-38"></a>
-<a id="__codelineno-27-39" name="__codelineno-27-39" href="#__codelineno-27-39"></a>OUTCOME EXPECTED :
-<a id="__codelineno-27-40" name="__codelineno-27-40" href="#__codelineno-27-40"></a>An Ipython Notebook which shows a classical Machine Learning Pipeline with data stored in the DataLake, by ingesting, transforming and then predicting customer churn
-<a id="__codelineno-27-41" name="__codelineno-27-41" href="#__codelineno-27-41"></a>
-<a id="__codelineno-27-42" name="__codelineno-27-42" href="#__codelineno-27-42"></a>Let me know if you have any questions. Also test whether you are able to create a dummy table and insert some sample rows before you begin this task.
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">This May Take a Few Minutes</p>
-<p>Cursor will plan and evaluate options before generating the notebook. You may be asked for permissions to run code and save files — approve these prompts to allow the Agent to proceed.</p>
-</div>
-<p><img alt="Cursor Agent planning the ML pipeline" src="../../images/cursor-remote-ssh/cursor-agent-prompt.png" /></p>
-<h3 id="3-review-the-generated-notebook">3. Review the Generated Notebook<a class="headerlink" href="#3-review-the-generated-notebook" title="Permanent link">&para;</a></h3>
-<p>When the Agent finishes, it creates an IPython notebook (typically <code>customer_churn_pipeline.ipynb</code>) in your project directory. Your output should look similar to this <a href="../../artifacts/customer_churn_pipeline.ipynb">sample notebook generated by Cursor</a> — download or open it to explore the full pipeline before running your own.</p>
-<p>The notebook demonstrates a full ML pipeline:</p>
-<ol>
-<li><strong>Generates</strong> a synthetic customer churn dataset</li>
-<li><strong>Loads</strong> the data into the DataLake (Impala) via <code>cml.data_v1</code></li>
-<li><strong>Ingests</strong> training data back from the lake</li>
-<li><strong>Trains</strong> a scikit-learn model with proper feature preprocessing</li>
-<li><strong>Predicts</strong> churn on unseen holdout customers</li>
-</ol>
-<p><img alt="Customer churn pipeline notebook created by Cursor" src="../../images/cursor-remote-ssh/customer-churn-pipeline.png" /></p>
-<h3 id="4-run-and-verify-the-notebook">4. Run and Verify the Notebook<a class="headerlink" href="#4-run-and-verify-the-notebook" title="Permanent link">&para;</a></h3>
-<p>Open <code>customer_churn_pipeline.ipynb</code> in Cursor and run the cells sequentially. The notebook installs <code>scikit-learn</code> if needed, creates tables in Impala, trains a model, and reports metrics such as ROC-AUC and accuracy on holdout data.</p>
-<p>Compare your results against the <a href="../../artifacts/customer_churn_pipeline.ipynb">sample notebook</a> included in this documentation site, or browse it on GitHub at <a href="https://github.com/SuperEllipse/zeta-hol/blob/main/artifacts/customer_churn_pipeline.ipynb"><code>artifacts/customer_churn_pipeline.ipynb</code></a>.</p>
-<p>Section 4 (Impala inserts) may take a few minutes to complete.</p>
-<hr />
-<h2 id="alternative-claude-cli">Alternative: Claude CLI<a class="headerlink" href="#alternative-claude-cli" title="Permanent link">&para;</a></h2>
-<p>If you prefer working entirely in the browser without Remote SSH, see <strong><a href="../claude-private-model/">Claude with Private Model</a></strong> for using the Claude CLI directly in the workbench terminal.</p>
+<h2 id="quick-links">Quick links<a class="headerlink" href="#quick-links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="one-time-setup/">One-time Setup</a></li>
+<li><a href="connect-each-session/">Connect each session</a></li>
+<li><a href="testing-cursor/">Testing Cursor</a></li>
+</ul>
 
 
 
