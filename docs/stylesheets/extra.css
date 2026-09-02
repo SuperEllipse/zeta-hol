@@ -12,3 +12,232 @@
   margin-top: -0.5em;
   text-align: center;
 }
+
+/* Hackathon schedule */
+.schedule-page {
+  margin-top: 0.5rem;
+}
+
+.schedule-prep {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--md-primary-fg-color);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent);
+}
+
+.schedule-prep-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.schedule-prep p {
+  margin: 0.35rem 0 0;
+}
+
+.schedule-day {
+  margin-bottom: 2.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.schedule-day-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.schedule-day-header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  border: none;
+}
+
+.schedule-day-theme {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.schedule-day-badge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.5rem;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.schedule-day--enablement .schedule-day-header { background: color-mix(in srgb, #1565c0 12%, var(--md-default-bg-color)); }
+.schedule-day--enablement .schedule-day-badge { background: #1565c0; }
+
+.schedule-day--hacking .schedule-day-header { background: color-mix(in srgb, #e65100 12%, var(--md-default-bg-color)); }
+.schedule-day--hacking .schedule-day-badge { background: #e65100; }
+
+.schedule-day--demos .schedule-day-header { background: color-mix(in srgb, #2e7d32 12%, var(--md-default-bg-color)); }
+.schedule-day--demos .schedule-day-badge { background: #2e7d32; }
+
+.schedule-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.schedule-item {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 1rem 1.25rem;
+  padding: 1.15rem 1.5rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.schedule-item:last-child {
+  border-bottom: none;
+}
+
+.schedule-time {
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--md-primary-fg-color);
+  font-variant-numeric: tabular-nums;
+}
+
+.schedule-body h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  border: none;
+}
+
+.schedule-body p {
+  margin: 0 0 0.5rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.schedule-body p:last-child {
+  margin-bottom: 0;
+}
+
+.schedule-location {
+  font-weight: 500;
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+.schedule-tag {
+  display: inline-block;
+  margin-top: 0.35rem;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color--light);
+}
+
+.schedule-tag--virtual {
+  background: color-mix(in srgb, #1565c0 18%, transparent);
+  color: #1565c0;
+}
+
+.schedule-tag--deadline {
+  background: color-mix(in srgb, #c62828 18%, transparent);
+  color: #c62828;
+}
+
+.schedule-item--highlight {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 6%, transparent);
+}
+
+.schedule-item--block .schedule-body h3 {
+  font-size: 1.05rem;
+}
+
+.schedule-item--social {
+  background: color-mix(in srgb, #6a1b9a 6%, transparent);
+}
+
+.schedule-item--deadline .schedule-time {
+  color: #c62828;
+}
+
+.schedule-subsessions {
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  background: var(--md-code-bg-color);
+}
+
+.schedule-subsessions h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.75;
+}
+
+.schedule-subsessions ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.schedule-subsessions li {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.schedule-note {
+  font-size: 0.88rem !important;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.schedule-reward {
+  margin-top: 0.65rem;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.88rem;
+  border-radius: 6px;
+  background: color-mix(in srgb, #6a1b9a 10%, var(--md-code-bg-color));
+  border-left: 3px solid #6a1b9a;
+}
+
+.schedule-reward--gold {
+  background: color-mix(in srgb, #f9a825 14%, var(--md-code-bg-color));
+  border-left-color: #f9a825;
+}
+
+.schedule-reward-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 600px) {
+  .schedule-item {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .schedule-day-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

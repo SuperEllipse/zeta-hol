@@ -32,6 +32,7 @@ theme:
 
 nav:
   - Home: index.md
+  - Event Schedule: hackathon-schedule.md
   - Getting Started:
       - Login & Workbench Setup: setup/login-and-project.md
       - Project Creation & Runtimes: setup/project-and-runtimes.md

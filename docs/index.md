@@ -6,11 +6,12 @@ Welcome to the **Cloudera AI Hands-on Lab and Hackathon** guide for Zeta Global 
 
 This guide walks you through:
 
-1. **[Login & Workbench Setup](setup/login-and-project.md)** — Access the Cloudera Data Platform and connect to the shared AI workbench.
-2. **[Project Creation & Runtimes](setup/project-and-runtimes.md)** — Create your team project and configure Python runtimes.
-3. **[Vibe Coding with Cloudera AI](vibe-coding/cursor-remote-ssh/)** — Use Cursor (Remote SSH) or Claude CLI with private model inference for AI-assisted development.
-4. **[Sample Code: Data Upload](sample-code/data-upload.md)** — Load sample metric data into your project using the provided notebook and JSON file.
-5. **[Demo Videos & Interactive Tours](demo-videos/index.md)** — Watch the custom data loading demo and explore guided tours of Cloudera AI.
+1. **[Event Schedule](hackathon-schedule.md)** — Day-by-day agenda for the hackathon weekend (PHT).
+2. **[Login & Workbench Setup](setup/login-and-project.md)** — Access the Cloudera Data Platform and connect to the shared AI workbench.
+3. **[Project Creation & Runtimes](setup/project-and-runtimes.md)** — Create your team project and configure Python runtimes.
+4. **[Vibe Coding with Cloudera AI](vibe-coding/cursor-remote-ssh/)** — Use Cursor (Remote SSH) or Claude CLI with private model inference for AI-assisted development.
+5. **[Sample Code: Data Upload](sample-code/data-upload.md)** — Load sample metric data into your project using the provided notebook and JSON file.
+6. **[Demo Videos & Interactive Tours](demo-videos/index.md)** — Watch the custom data loading demo and explore guided tours of Cloudera AI.
 
 ## Quick Links
 
