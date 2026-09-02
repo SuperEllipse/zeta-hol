@@ -68,7 +68,7 @@ You can then select this runtime when starting a new session.
 
 Your project is the workspace for all hackathon deliverables. From here:
 
-- **[Vibe Coding with Cloudera AI](../vibe-coding/cursor-remote-ssh.md)** — Set up Cursor or Claude CLI for AI-assisted development
+- **[Vibe Coding with Cloudera AI](../vibe-coding/cursor-remote-ssh/)** — Set up Cursor or Claude CLI for AI-assisted development
 - **[Sample Code: Data Upload](../sample-code/data-upload.md)** — Load sample metric data into your project
 
 ## Troubleshooting

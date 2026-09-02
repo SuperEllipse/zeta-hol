@@ -151,4 +151,4 @@ claude --version
 ## Next Steps
 
 - Load sample data using the [Data Upload notebook](../sample-code/data-upload.md)
-- Connect Cursor via [Remote SSH](cursor-remote-ssh.md) for IDE-based development
+- Connect Cursor via [Remote SSH](cursor-remote-ssh/) for IDE-based development

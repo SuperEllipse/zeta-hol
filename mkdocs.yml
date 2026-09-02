@@ -36,7 +36,10 @@ nav:
       - Login & Workbench Setup: setup/login-and-project.md
       - Project Creation & Runtimes: setup/project-and-runtimes.md
   - Vibe Coding with Cloudera AI:
-      - Cursor with Remote SSH: vibe-coding/cursor-remote-ssh.md
+      - Cursor with Remote SSH:
+          - One-time Setup: vibe-coding/cursor-remote-ssh/one-time-setup.md
+          - Connect each session: vibe-coding/cursor-remote-ssh/connect-each-session.md
+          - Testing Cursor: vibe-coding/cursor-remote-ssh/testing-cursor.md
       - Claude with Private Model: vibe-coding/claude-private-model.md
   - Sample Code:
       - Data Upload & Insertion: sample-code/data-upload.md
@@ -45,7 +48,11 @@ nav:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite

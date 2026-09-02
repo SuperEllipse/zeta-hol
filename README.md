@@ -64,7 +64,7 @@ Open [http://127.0.0.1:8000](http://127.0.0.1:8000) to preview the documentation
 |---------|-------------|
 | [Login & Workbench Setup](docs/setup/login-and-project.md) | CDP login, Cloudera AI, zeta1-workbench |
 | [Project Creation](docs/setup/project-and-runtimes.md) | Team project setup and Python runtimes |
-| [Cursor Remote SSH](docs/vibe-coding/cursor-remote-ssh.md) | Connect Cursor IDE to the workbench |
+| [Cursor Remote SSH](docs/vibe-coding/cursor-remote-ssh/) | Connect Cursor IDE to the workbench |
 | [Claude Private Model](docs/vibe-coding/claude-private-model.md) | Use Claude CLI with CAI Inference |
 | [Data Upload](docs/sample-code/data-upload.md) | Sample JSON data and loading notebook |
 | [Demo Videos](docs/demo-videos/index.md) | Workshop recording |
